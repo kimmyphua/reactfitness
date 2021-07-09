@@ -1,0 +1,30 @@
+
+.container {
+    height: 60vh;
+}
+
+.loginFormContainer {
+    width: 24rem;
+}
+
+.loginFormLegend {
+    width: 100%;
+    background: #dee2e6;
+}
+
+.errorMessage {
+    font-size: 12px;
+    letter-spacing: 0.05rem;
+    padding-left: 0.25rem;
+}
+
+.inputStyle {
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 20px;
+}
+
+.inputStyle:hover {
+    background: lightblue;
+    padding: 10px;
+    margin-bottom: 20px;
+}

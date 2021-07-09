@@ -1,0 +1,28 @@
+.sample {
+    background-color: white;
+}
+
+.container {
+    height: 70vh;
+}
+
+.registrationFormContainer {
+    width: 24rem;
+}
+
+.registrationFormLegend {
+    width: 100%;
+    background: #dee2e6;
+
+}
+
+.inputStyle {
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 10px;
+}
+
+.inputStyle:hover {
+    background: lightblue;
+    padding: 10px;
+    margin-bottom: 10px;
+}
