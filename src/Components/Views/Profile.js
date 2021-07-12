@@ -3,12 +3,21 @@ import {Container, Card,Row, Col,Button, ListGroup} from 'react-bootstrap';
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 import axios from "axios";
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+import SingleFood from "./SingleFood";
+import SingleExercise from "./SingleExercise";
+
 
 function Profile() {
     const [user, setUser] = useState({})
     const [myFood, setMyFood] = useState([])
+    const [myExercise, setMyExercise] = useState([])
+    const [value, onChange] = useState(new Date());
+    const [visible, setVisible] =useState(true)
+    const [visibleEx, setVisibleEx] =useState(true)
+    let date = value.toDateString()
 
-    useEffect(() => {
+
         async function setUserStats() {
             try {
                 let {data} = await axios.get("/api/auth/user", {
@@ -18,97 +27,250 @@ function Profile() {
                 })
                 setUser(data.user)
                 setMyFood(data.user.food_log)
-
+                setMyExercise(data.user.exercise_log)
+                console.log(data.user.exercise_log)
             } catch (e) {
                 setUser({})
                 localStorage.removeItem("token")
             }
         }
-
+    useEffect(() => {
         setUserStats()
     }, [])
 
-    const [value, onChange] = useState(new Date());
-    let date = value.toDateString()
+
+    let dailyExercise = myExercise.filter(ex => ex.date === date)
+    console.log(myExercise)
+    let daily = myFood.filter(f => f.date === date)
+    let sum = 0
+    let sumCarbs = 0
+    let sumProtein = 0
+    let sumFat = 0
+    let sumSugar = 0
+    let sumFiber = 0
+    daily.forEach(f=> {
+        sum += f.calories
+    })
+    daily.forEach(f=> {
+        sumFat += f.total_fat
+    })
+    daily.forEach(f=> {
+        sumCarbs += f.total_carbs
+    })
+    daily.forEach(f=> {
+        sumProtein += f.protein
+    })
+    daily.forEach(f=> {
+        sumSugar += f.sugars
+    })
+    daily.forEach(f=> {
+        sumFiber += f.fiber
+    })
 
 
-    console.log(value.toLocaleDateString(), typeof(value.toLocaleDateString()))
+
+
+
+
     return (
-        <Container fluid>
+        <Container fluid className="home-bg">
             <Row>
-                <Col md={5}>
+                <Col md={6}>
+
                     <Calendar
                         onChange={onChange}
                         value={value}
-                        className="w-100"/>
+                        className="w-100 "
+                        />
 
-                    <div className="bg-dark text-white my-3">
-                        Breakfast:
-                        {myFood.map(food => (
-                            <>
-                                <p>{food.name}</p>
-                                <p>{food.calories}</p>
-                                <p>{food.serving_size}</p>
-                                <p>{food.serving_grams}</p>
-                            </>
+
+                    <div className="bg-dark text-white mb-3">
+                        <h3 className="mt-2 font-monospace">B r e a k f a s t:</h3>
+                        {daily.filter(f => f.kind.includes("breakfast")).map((food,i) => (
+
+                            <Row key={i} className="border-bottom border-light border-1 mx-1 ">
+                                <Col md={5}><span>{food.name}</span></Col>
+                                <Col md={4}>
+                                    <span>{food.calories} Cals , {food.serving_weight} g </span>
+                                </Col>
+                                <Col md={3}>
+                                    <SingleFood
+                                        food={food}
+                                        setUser={setUser}
+                                        setMyFood={setMyFood}
+                                    />
+                                </Col>
+                            </Row>
                         ))}
                     </div>
-                    <div className="bg-dark text-white my-3">
-                        Lunch:
-                        {myFood.map(food => (
-                            <>
-                                <p>{food.name}</p>
-                                <p>{food.calories}</p>
-                                <p>{food.serving_size}</p>
-                                <p>{food.serving_grams}</p>
-                            </>
+
+
+                    <div className="bg-dark text-white mb-3">
+                        <h3 className="mt-2 font-monospace">L u n c h:</h3>
+                        {daily.filter(f => f.kind.includes("lunch")).map((food,i) => (
+                            <Row key={i} className="border-bottom mx-2 border-light border-1 mx-1">
+                                <Col md={5}><span>{food.name}</span></Col>
+                                <Col md={4}>
+                                    <span>{food.calories} Cals , {food.serving_weight} g </span>
+                                </Col>
+                                <Col md={3}>
+                                    <SingleFood
+                                        food={food}
+                                        setUser={setUser}
+                                        setMyFood={setMyFood}
+                                    />
+                                </Col>
+                            </Row>
                         ))}
                     </div>
-                    <div className="bg-dark text-white my-3">
-                        Dinner:
-                        {myFood.map(food => (
-                            <>
-                                <p>{food.name}</p>
-                                <p>{food.calories}</p>
-                                <p>{food.serving_size}</p>
-                                <p>{food.serving_grams}</p>
-                            </>
+
+
+                    <div className="bg-dark text-white mb-3">
+                        <h3 className="mt-2 font-monospace">D i n n e r:</h3>
+                        {daily.filter(f => f.kind.includes("dinner")).map((food,i) => (
+                            <Row key={i} className="border-bottom border-light border-1 mx-1">
+                                <Col md={5}><span>{food.name}</span></Col>
+                                <Col md={4}>
+                                    <span>{food.calories} Cals , {food.serving_weight} g </span>
+                                </Col>
+                                <Col md={3}>
+                                    <SingleFood
+                                        food={food}
+                                        setUser={setUser}
+                                        setMyFood={setMyFood}
+                                    />
+                                </Col>
+                            </Row>
                         ))}
                     </div>
-                    <div className="bg-dark text-white my-3">
-                        Snack:
-                        {myFood.map(food => (
-                            <>
-                                <p>{food.name}</p>
-                                <p>{food.calories}</p>
-                                <p>{food.serving_size}</p>
-                                <p>{food.serving_grams}</p>
-                            </>
+
+
+                    <div className="bg-dark text-white mb-3">
+                        <h3 className="mt-2 font-monospace">S n a c k s:</h3>
+                        {daily.filter(f => f.kind.includes("snack")).map((food,i) => (
+                            <Row key={i} className="border-bottom border-light border-1 mx-1">
+                                <Col md={5}><span>{food.name}</span></Col>
+                                <Col md={4}>
+                                    <span>{food.calories} Cals , {food.serving_weight} g </span>
+                                </Col>
+                                <Col md={3}>
+                                <SingleFood
+                                food={food}
+                                setUser={setUser}
+                                setMyFood={setMyFood}
+                                />
+                                </Col>
+                            </Row>
                         ))}
                     </div>
 
                 </Col>
 
-                <Col md={5} className="m-3">
-            <Card style={{ width: '28rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Col md={6}>
+
+            <Card style={{ width: '22rem', opacity: "0.9" }}>
+                <Row>
+                    <Col md={6}>
+                    <Button className="bg-dark" onClick={() => setVisible(!visible)}> Toggle Nutrition </Button>
+                    </Col>
+                    <Col md={6}>
+                    <Button className="bg-dark" onClick={() => setVisibleEx(!visibleEx)}> Toggle Exercise </Button>
+                    </Col>
+                </Row>
+                <Card.Img variant="top"
+                          style={{
+                              marginTop: "10px",
+                              display: "block",
+                              marginLeft: "auto",
+                              marginRight: "auto",
+                              width: "20%",
+                                cursor:"pointer" }}
+                            src="https://image.flaticon.com/icons/png/512/284/284741.png"
+                            />
                 <Card.Body>
                     <Card.Title>Name: {user.name}</Card.Title>
                     <Card.Text>
-                        -------------------------
+                        <h5>Date: {date}</h5>
                     </Card.Text>
 
                 </Card.Body>
-
+                {visible ?
                 <ListGroup variant="flush">
-                    <ListGroup.Item>DATE: {date}</ListGroup.Item>
                     <ListGroup.Item>Total Calories Consumed:
-                    </ListGroup.Item>
-                    <ListGroup.Item>Weight: </ListGroup.Item>
-                </ListGroup>
-            </Card>
-                </Col>
+                        <h6 className="text-danger font-monospace"> {Math.floor(sum)} / {user.daily_calorie} kcal</h6>
+                        <div className="progress">
+                            <div className="progress-bar bg-danger progress-bar-striped" role="progressbar" style={{width: `${Math.floor(sum)*100/user.daily_calorie}%`}}> </div>
+                        </div>
 
+                    </ListGroup.Item>
+                    <ListGroup.Item>Total Protein :
+                        <h6 className="text-danger font-monospace"> {Math.floor(sumProtein)} / {user.protein}  g </h6>
+                        <div className="progress">
+                            <div className="progress-bar progress-bar-striped bg-info" role="progressbar" style={{width: `${Math.floor(sumProtein)*100/user.protein}%`}}> </div>
+                        </div>
+                    </ListGroup.Item>
+                    <ListGroup.Item>Total Carbohydrate :
+                        <h6 className="text-danger font-monospace"> {Math.floor(sumCarbs)} / {user.carbs} g </h6>
+                        <div className="progress">
+                            <div className="progress-bar bg-warning progress-bar-striped" role="progressbar" style={{width: `${Math.floor(sumCarbs)*100/user.carbs}%`}}> </div>
+                        </div>
+                    </ListGroup.Item>
+                    <ListGroup.Item>Total Fat :
+                        <h6 className="text-danger font-monospace">{Math.floor(sumFat)} / {user.fat} g </h6>
+                        <div className="progress">
+                            <div className="progress-bar bg-success progress-bar-striped" role="progressbar" style={{width: `${Math.floor(sumFat)*100/user.fat}%`}}> </div>
+                        </div>
+                    </ListGroup.Item>
+                    <ListGroup.Item>Total Sugar :
+                        <h6 className="text-danger font-monospace"> {Math.floor(sumSugar)}  g </h6>
+                        </ListGroup.Item>
+                    <ListGroup.Item>Total Dietary Fiber :
+                        <h6 className="text-danger font-monospace">{Math.floor(sumFiber)} g  </h6>
+                        </ListGroup.Item>
+                </ListGroup>
+
+                : <> </>}
+
+                {visibleEx ?
+
+                    <p>
+
+
+                           {dailyExercise.map( (ex, i) =>(
+                                <ListGroup
+                                    horizontal='sm'
+                                    variant="flush"
+                                    key={i}
+                                    className="fw-light text-start border-muted border-bottom">
+
+                                   <ListGroup.Item>
+                                    <FitnessCenterIcon/>  {ex.activity_hour}
+                                   </ListGroup.Item>
+
+                                   <ListGroup.Item> {Math.floor(ex.calories_kg)}kcal
+                                   </ListGroup.Item>
+                                   <ListGroup.Item>
+                                       <SingleExercise
+                                           exercise={ex}
+                                           setUser={setUser}
+                                           setMyExercise={setMyExercise}/>
+                                   </ListGroup.Item>
+                                </ListGroup>
+                            ))}
+
+                    </p>
+
+                    : <> </>}
+
+
+
+
+
+
+            </Card>
+
+
+                </Col>
 
 
             </Row>

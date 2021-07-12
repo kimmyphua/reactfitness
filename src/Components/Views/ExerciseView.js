@@ -1,0 +1,127 @@
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import {Col, Form, Modal, Row} from "react-bootstrap";
+
+
+function ExerciseView({ex, user,i}) {
+    const [myExercise, setMyExercise] = useState({})
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const [startDate, setStartDate] = useState(new Date());
+    const [quantity, setQuantity] = useState(1)
+
+    async function change(){
+
+        setMyExercise(prevState => ({...prevState, activity_hour: ex.activity_hour,calories_kg: ex.calories_kg*user.weight*quantity, date: startDate.toDateString() }))
+        console.log(myExercise)
+
+    }
+
+    // console.log(user.exercise_log)
+
+    async function postExercise(e) {
+        e.preventDefault()
+        // console.log(myExercise)
+        try {
+             await axios.put(`/api/user/exercise/${user._id}`, myExercise )
+            console.log(myExercise)
+        } catch (e) {
+            console.log(e.response)
+        }
+    }
+console.log(user)
+
+
+    useEffect(() => {
+        change()
+    }, [startDate])
+
+    useEffect(() => {
+        change()
+    }, [quantity])
+
+
+    function handleShow() {
+        setShow(true)
+        change()
+    }
+
+
+
+    return (
+        <>
+            <Modal show={show} onHide={handleClose}>
+                <div className={`border border-dark border-2`}>
+
+                    <Row className="justify-content-center mx-2 text-dark text-center">
+
+
+
+                        <img style={{width: "30%"}} className=""
+                             src="https://img.icons8.com/bubbles/2x/exercise.png"/>
+                        <label>Exercise Date</label>
+                        <DatePicker
+                            selected={startDate}
+                            onChange={date => setStartDate(date)}
+                            shouldCloseOnSelect={false}
+                        />
+
+                            <h6> {ex.activity_hour}</h6>
+                            <h6> Total Calories: {Math.floor(ex.calories_kg*user.weight*quantity)} kcal</h6>
+
+                        <span>
+
+                            <form className="form-floating px-5 mx-5">
+                            <input onChange={(e)=>setQuantity(e.target.value)}
+                                   type="number"
+                                   name="quantity"
+                                   id="label"
+                                   className="form-control"
+                                   min={1}
+                            />
+                            <label htmlFor="label"
+                                   className="text-dark text-center mx-5">{quantity} hours</label>
+                        </form>
+                        </span>
+
+                        <Form onSubmit={postExercise} >
+                            <Row className="justify-content-center">
+                                <button
+                                    type="submit" style={{width: "40%"}}
+                                    className="btn bg-light border-dark border-1 my-2">
+                                    Log Exercise
+                                </button>
+                            </Row>
+                        </Form>
+
+
+                    </Row>
+
+                </div>
+
+
+            </Modal>
+
+
+            <td>{i+1}</td>
+            <td> {ex.activity_hour}</td>
+            <td> {Math.floor(ex.calories_kg*user.weight)} kcal</td>
+            <td>
+
+                    <button
+                        onClick={handleShow}
+                        className="btn btn-light border border-dark mx-3 py-1 px-2"
+                    > Add
+                    </button>
+
+            </td>
+
+
+
+        </>
+    );
+}
+
+export default ExerciseView;

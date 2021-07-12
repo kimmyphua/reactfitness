@@ -26,6 +26,7 @@
 
 .App-link {
   color: #61dafb;
+  font-family: "Arial Rounded MT Bold";
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +36,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+.info{
+  background: url("https://www.tofinoschooloffitness.com/wp-content/uploads/tofino-school-of-fitness-background1.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  font-family: Arial;
+  color: white;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pageButton {
+  background: radial-gradient( #063445, black);
+  margin: 0 1px 0 1px;
+}
+
+.pageButton:hover {
+  background: radial-gradient( #063445, #399599);
+  margin: 0 1px 0 1px;
+}
+
+.home-bg{
+
+  background: url("https://c4.wallpaperflare.com/wallpaper/787/610/414/muscle-press-pose-athlete-workout-hd-wallpaper-preview.jpg");
+
+  /*background: url("https://img.freepik.com/free-photo/healthy-food-background-autumn-fresh-vegetables-dark-stone-table-with-copy-space-top-view_127032-1953.jpg?size=626&ext=jpg");*/
+  /*background: url("https://www.crushpixel.com/big-static16/preview4/healthy-green-cocktail-with-avocado-2477173.jpg");*/
+  /*background: url("https://img.freepik.com/free-photo/healthy-food-dish-blue-background-healthful-set-including-vegetables-fruits-grape-apple-kiwi-pepper-lime-cabbage-zucchini-grapefruit-avocado-proper-nutrition-vegetarian-menu_155003-34694.jpg?size=626&ext=jpg&ga=GA1.2.1382386985.1622678400");*/
+  background-color: rgba(255,255,255,0.3);
+  background-blend-mode: lighten;
+  background-size: cover;
 }

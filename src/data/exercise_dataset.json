@@ -1,0 +1,1994 @@
+[
+ {
+   "activity_hour": "Cycling, mountain bike, bmx",
+   "onethreezero": 502,
+   "onefivefive": 598,
+   "oneeightzero": 695,
+   "twozerofive": 791,
+   "calories_kg":  1.75072971940299
+ },
+ {
+   "activity_hour": "Cycling, <10 mph, leisure bicycling",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Cycling, >20 mph, racing",
+   "onethreezero": 944,
+   "onefivefive": 1126,
+   "oneeightzero": 1308,
+   "twozerofive": 1489,
+   "calories_kg":  3.29497352835821
+ },
+ {
+   "activity_hour": "Cycling, 10-11.9 mph, light",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Cycling, 12-13.9 mph, moderate",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Cycling, 14-15.9 mph, vigorous",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Cycling, 16-19 mph, very fast, racing",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Unicycling",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Stationary cycling, very light",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Stationary cycling, light",
+   "onethreezero": 325,
+   "onefivefive": 387,
+   "oneeightzero": 449,
+   "twozerofive": 512,
+   "calories_kg":  1.13262599402985
+ },
+ {
+   "activity_hour": "Stationary cycling, moderate",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Stationary cycling, vigorous",
+   "onethreezero": 620,
+   "onefivefive": 739,
+   "oneeightzero": 858,
+   "twozerofive": 977,
+   "calories_kg":  2.16234753432836
+ },
+ {
+   "activity_hour": "Stationary cycling, very vigorous",
+   "onethreezero": 738,
+   "onefivefive": 880,
+   "oneeightzero": 1022,
+   "twozerofive": 1163,
+   "calories_kg":  2.57464235223881
+ },
+ {
+   "activity_hour": "Calisthenics, vigorous, pushups, situps…",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Calisthenics, light",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Circuit training, minimal rest",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Weight lifting, body building, vigorous",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Weight lifting, light workout",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Health club exercise",
+   "onethreezero": 325,
+   "onefivefive": 387,
+   "oneeightzero": 449,
+   "twozerofive": 512,
+   "calories_kg":  1.13262599402985
+ },
+ {
+   "activity_hour": "Stair machine",
+   "onethreezero": 531,
+   "onefivefive": 633,
+   "oneeightzero": 735,
+   "twozerofive": 838,
+   "calories_kg":  1.85295717014925
+ },
+ {
+   "activity_hour": "Rowing machine, light",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Rowing machine, moderate",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Rowing machine, vigorous",
+   "onethreezero": 502,
+   "onefivefive": 598,
+   "oneeightzero": 695,
+   "twozerofive": 791,
+   "calories_kg":  1.75072971940299
+ },
+ {
+   "activity_hour": "Rowing machine, very vigorous",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Ski machine",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Aerobics, low impact",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Aerobics, high impact",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Aerobics, step aerobics",
+   "onethreezero": 502,
+   "onefivefive": 598,
+   "oneeightzero": 695,
+   "twozerofive": 791,
+   "calories_kg":  1.75072971940299
+ },
+ {
+   "activity_hour": "Aerobics, general",
+   "onethreezero": 384,
+   "onefivefive": 457,
+   "oneeightzero": 531,
+   "twozerofive": 605,
+   "calories_kg":  1.33843490149254
+ },
+ {
+   "activity_hour": "Jazzercise",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Stretching, hatha yoga",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Mild stretching",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Instructing aerobic class",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Water aerobics",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Ballet, twist, jazz, tap",
+   "onethreezero": 266,
+   "onefivefive": 317,
+   "oneeightzero": 368,
+   "twozerofive": 419,
+   "calories_kg":  0.927494089552239
+ },
+ {
+   "activity_hour": "Ballroom dancing, slow",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Ballroom dancing, fast",
+   "onethreezero": 325,
+   "onefivefive": 387,
+   "oneeightzero": 449,
+   "twozerofive": 512,
+   "calories_kg":  1.13262599402985
+ },
+ {
+   "activity_hour": "Running, 5 mph (12 minute mile)",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Running, 5.2 mph (11.5 minute mile)",
+   "onethreezero": 531,
+   "onefivefive": 633,
+   "oneeightzero": 735,
+   "twozerofive": 838,
+   "calories_kg":  1.85295717014925
+ },
+ {
+   "activity_hour": "Running, 6 mph (10 min mile)",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Running, 6.7 mph (9 min mile)",
+   "onethreezero": 649,
+   "onefivefive": 774,
+   "oneeightzero": 899,
+   "twozerofive": 1024,
+   "calories_kg":  2.2652519880597
+ },
+ {
+   "activity_hour": "Running, 7 mph (8.5 min mile)",
+   "onethreezero": 679,
+   "onefivefive": 809,
+   "oneeightzero": 940,
+   "twozerofive": 1070,
+   "calories_kg":  2.36815644179104
+ },
+ {
+   "activity_hour": "Running, 7.5mph (8 min mile)",
+   "onethreezero": 738,
+   "onefivefive": 880,
+   "oneeightzero": 1022,
+   "twozerofive": 1163,
+   "calories_kg":  2.57464235223881
+ },
+ {
+   "activity_hour": "Running, 8 mph (7.5 min mile)",
+   "onethreezero": 797,
+   "onefivefive": 950,
+   "oneeightzero": 1103,
+   "twozerofive": 1256,
+   "calories_kg":  2.77977425671642
+ },
+ {
+   "activity_hour": "Running, 8.6 mph (7 min mile)",
+   "onethreezero": 826,
+   "onefivefive": 985,
+   "oneeightzero": 1144,
+   "twozerofive": 1303,
+   "calories_kg":  2.88267871044776
+ },
+ {
+   "activity_hour": "Running, 9 mph (6.5 min mile)",
+   "onethreezero": 885,
+   "onefivefive": 1056,
+   "oneeightzero": 1226,
+   "twozerofive": 1396,
+   "calories_kg":  3.08916462089552
+ },
+ {
+   "activity_hour": "Running, 10 mph (6 min mile)",
+   "onethreezero": 944,
+   "onefivefive": 1126,
+   "oneeightzero": 1308,
+   "twozerofive": 1489,
+   "calories_kg":  3.29497352835821
+ },
+ {
+   "activity_hour": "Running, 10.9 mph (5.5 min mile)",
+   "onethreezero": 1062,
+   "onefivefive": 1267,
+   "oneeightzero": 1471,
+   "twozerofive": 1675,
+   "calories_kg":  3.70659134328358
+ },
+ {
+   "activity_hour": "Running, cross country",
+   "onethreezero": 531,
+   "onefivefive": 633,
+   "oneeightzero": 735,
+   "twozerofive": 838,
+   "calories_kg":  1.85295717014925
+ },
+ {
+   "activity_hour": "Running, general",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Running, on a track, team practice",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Running, stairs, up",
+   "onethreezero": 885,
+   "onefivefive": 1056,
+   "oneeightzero": 1226,
+   "twozerofive": 1396,
+   "calories_kg":  3.08916462089552
+ },
+ {
+   "activity_hour": "Track and field (shot, discus)",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Track and field (high jump, pole vault)",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Track and field (hurdles)",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Archery",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Badminton",
+   "onethreezero": 266,
+   "onefivefive": 317,
+   "oneeightzero": 368,
+   "twozerofive": 419,
+   "calories_kg":  0.927494089552239
+ },
+ {
+   "activity_hour": "Basketball game, competitive",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Playing basketball, non game",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Basketball, officiating",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Basketball, shooting baskets",
+   "onethreezero": 266,
+   "onefivefive": 317,
+   "oneeightzero": 368,
+   "twozerofive": 419,
+   "calories_kg":  0.927494089552239
+ },
+ {
+   "activity_hour": "Basketball, wheelchair",
+   "onethreezero": 384,
+   "onefivefive": 457,
+   "oneeightzero": 531,
+   "twozerofive": 605,
+   "calories_kg":  1.33843490149254
+ },
+ {
+   "activity_hour": "Running, training, pushing wheelchair",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Billiards",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Bowling",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Boxing, in ring",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Boxing, punching bag",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Boxing, sparring",
+   "onethreezero": 531,
+   "onefivefive": 633,
+   "oneeightzero": 735,
+   "twozerofive": 838,
+   "calories_kg":  1.85295717014925
+ },
+ {
+   "activity_hour": "Coaching: football, basketball, soccer…",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Cricket (batting, bowling)",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Croquet",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Curling",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Darts (wall or lawn)",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Fencing",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Football, competitive",
+   "onethreezero": 531,
+   "onefivefive": 633,
+   "oneeightzero": 735,
+   "twozerofive": 838,
+   "calories_kg":  1.85295717014925
+ },
+ {
+   "activity_hour": "Football, touch, flag, general",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Football or baseball, playing catch",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Frisbee playing, general",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Frisbee, ultimate frisbee",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Golf, general",
+   "onethreezero": 266,
+   "onefivefive": 317,
+   "oneeightzero": 368,
+   "twozerofive": 419,
+   "calories_kg":  0.927494089552239
+ },
+ {
+   "activity_hour": "Golf, walking and carrying clubs",
+   "onethreezero": 266,
+   "onefivefive": 317,
+   "oneeightzero": 368,
+   "twozerofive": 419,
+   "calories_kg":  0.927494089552239
+ },
+ {
+   "activity_hour": "Golf, driving range",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Golf, miniature golf",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Golf, walking and pulling clubs",
+   "onethreezero": 254,
+   "onefivefive": 303,
+   "oneeightzero": 351,
+   "twozerofive": 400,
+   "calories_kg":  0.885519904477612
+ },
+ {
+   "activity_hour": "Golf, using power cart",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Gymnastics",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Hacky sack",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Handball",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Handball, team",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Hockey, field hockey",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Hockey, ice hockey",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Riding a horse, general",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Horesback riding, saddling horse",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Horseback riding, grooming horse",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Horseback riding, trotting",
+   "onethreezero": 384,
+   "onefivefive": 457,
+   "oneeightzero": 531,
+   "twozerofive": 605,
+   "calories_kg":  1.33843490149254
+ },
+ {
+   "activity_hour": "Horseback riding, walking",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Horse racing, galloping",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Horse grooming, moderate",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Horseshoe pitching",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Jai alai",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Martial arts, judo, karate, jujitsu",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Martial arts, kick boxing",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Martial arts, tae kwan do",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Krav maga training",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Juggling",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Kickball",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Lacrosse",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Orienteering",
+   "onethreezero": 531,
+   "onefivefive": 633,
+   "oneeightzero": 735,
+   "twozerofive": 838,
+   "calories_kg":  1.85295717014925
+ },
+ {
+   "activity_hour": "Playing paddleball",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Paddleball, competitive",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Polo",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Racquetball, competitive",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Playing racquetball",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Rock climbing, ascending rock",
+   "onethreezero": 649,
+   "onefivefive": 774,
+   "oneeightzero": 899,
+   "twozerofive": 1024,
+   "calories_kg":  2.2652519880597
+ },
+ {
+   "activity_hour": "Rock climbing, rappelling",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Jumping rope, fast",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Jumping rope, moderate",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Jumping rope, slow",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Rugby",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Shuffleboard, lawn bowling",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Skateboarding",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Roller skating",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Roller blading, in-line skating",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Sky diving",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Soccer, competitive",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Playing soccer",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Softball or baseball",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Softball, officiating",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Softball, pitching",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Squash",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Table tennis, ping pong",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Tai chi",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Playing tennis",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Tennis, doubles",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Tennis, singles",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Trampoline",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Volleyball, competitive",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Playing volleyball",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Volleyball, beach",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Wrestling",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Wallyball",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Backpacking, Hiking with pack",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Carrying infant, level ground",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Carrying infant, upstairs",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Carrying 16 to 24 lbs, upstairs",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Carrying 25 to 49 lbs, upstairs",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Standing, playing with children, light",
+   "onethreezero": 165,
+   "onefivefive": 197,
+   "oneeightzero": 229,
+   "twozerofive": 261,
+   "calories_kg":  0.576806543283582
+ },
+ {
+   "activity_hour": "Walk/run, playing with children, moderate",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Walk/run, playing with children, vigorous",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Carrying small children",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Loading, unloading car",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Climbing hills, carrying up to 9 lbs",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Climbing hills, carrying 10 to 20 lb",
+   "onethreezero": 443,
+   "onefivefive": 528,
+   "oneeightzero": 613,
+   "twozerofive": 698,
+   "calories_kg":  1.5449208119403
+ },
+ {
+   "activity_hour": "Climbing hills, carrying 21 to 42 lb",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Climbing hills, carrying over 42 lb",
+   "onethreezero": 531,
+   "onefivefive": 633,
+   "oneeightzero": 735,
+   "twozerofive": 838,
+   "calories_kg":  1.85295717014925
+ },
+ {
+   "activity_hour": "Walking downstairs",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Hiking, cross country",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Bird watching",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Marching, rapidly, military",
+   "onethreezero": 384,
+   "onefivefive": 457,
+   "oneeightzero": 531,
+   "twozerofive": 605,
+   "calories_kg":  1.33843490149254
+ },
+ {
+   "activity_hour": "Children's games, hopscotch, dodgeball",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Pushing stroller or walking with children",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Pushing a wheelchair",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Race walking",
+   "onethreezero": 384,
+   "onefivefive": 457,
+   "oneeightzero": 531,
+   "twozerofive": 605,
+   "calories_kg":  1.33843490149254
+ },
+ {
+   "activity_hour": "Rock climbing, mountain climbing",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Walking using crutches",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Walking the dog",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Walking, under 2.0 mph, very slow",
+   "onethreezero": 118,
+   "onefivefive": 141,
+   "oneeightzero": 163,
+   "twozerofive": 186,
+   "calories_kg":  0.411617814925373
+ },
+  {
+    "activity_hour": "Coding, Desk Job",
+    "onethreezero": 118,
+    "onefivefive": 141,
+    "oneeightzero": 163,
+    "twozerofive": 186,
+    "calories_kg":  0.411617814925373
+  },
+ {
+   "activity_hour": "Walking 2.0 mph, slow",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Walking 2.5 mph",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Walking 3.0 mph, moderate",
+   "onethreezero": 195,
+   "onefivefive": 232,
+   "oneeightzero": 270,
+   "twozerofive": 307,
+   "calories_kg":  0.679710997014925
+ },
+ {
+   "activity_hour": "Walking 3.5 mph, brisk pace",
+   "onethreezero": 224,
+   "onefivefive": 267,
+   "oneeightzero": 311,
+   "twozerofive": 354,
+   "calories_kg":  0.782615450746269
+ },
+ {
+   "activity_hour": "Walking 3.5 mph, uphill",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Walking 4.0 mph, very brisk",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Walking 4.5 mph",
+   "onethreezero": 372,
+   "onefivefive": 443,
+   "oneeightzero": 515,
+   "twozerofive": 586,
+   "calories_kg":  1.29713771940299
+ },
+ {
+   "activity_hour": "Walking 5.0 mph",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Boating, power, speed boat",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Canoeing, camping trip",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Canoeing, rowing, light",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Canoeing, rowing, moderate",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Canoeing, rowing, vigorous",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Crew, sculling, rowing, competition",
+   "onethreezero": 708,
+   "onefivefive": 844,
+   "oneeightzero": 981,
+   "twozerofive": 1117,
+   "calories_kg":  2.47106089552239
+ },
+ {
+   "activity_hour": "Kayaking",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Paddle boat",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Windsurfing, sailing",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Sailing, competition",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Sailing, yachting, ocean sailing",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Skiing, water skiing",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Ski mobiling",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Skin diving, fast",
+   "onethreezero": 944,
+   "onefivefive": 1126,
+   "oneeightzero": 1308,
+   "twozerofive": 1489,
+   "calories_kg":  3.29497352835821
+ },
+ {
+   "activity_hour": "Skin diving, moderate",
+   "onethreezero": 738,
+   "onefivefive": 880,
+   "oneeightzero": 1022,
+   "twozerofive": 1163,
+   "calories_kg":  2.57464235223881
+ },
+ {
+   "activity_hour": "Skin diving, scuba diving",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Snorkeling",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Surfing, body surfing or board surfing",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Whitewater rafting, kayaking, canoeing",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Swimming laps, freestyle, fast",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Swimming laps, freestyle, slow",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Swimming backstroke",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Swimming breaststroke",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Swimming butterfly",
+   "onethreezero": 649,
+   "onefivefive": 774,
+   "oneeightzero": 899,
+   "twozerofive": 1024,
+   "calories_kg":  2.2652519880597
+ },
+ {
+   "activity_hour": "Swimming leisurely, not laps",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Swimming sidestroke",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Swimming synchronized",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Swimming, treading water, fast, vigorous",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Swimming, treading water, moderate",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Water aerobics, water calisthenics",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Water polo",
+   "onethreezero": 590,
+   "onefivefive": 704,
+   "oneeightzero": 817,
+   "twozerofive": 931,
+   "calories_kg":  2.05944308059702
+ },
+ {
+   "activity_hour": "Water volleyball",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Water jogging",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Diving, springboard or platform",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Ice skating, < 9 mph",
+   "onethreezero": 325,
+   "onefivefive": 387,
+   "oneeightzero": 449,
+   "twozerofive": 512,
+   "calories_kg":  1.13262599402985
+ },
+ {
+   "activity_hour": "Ice skating, average speed",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Ice skating, rapidly",
+   "onethreezero": 531,
+   "onefivefive": 633,
+   "oneeightzero": 735,
+   "twozerofive": 838,
+   "calories_kg":  1.85295717014925
+ },
+ {
+   "activity_hour": "Speed skating, ice, competitive",
+   "onethreezero": 885,
+   "onefivefive": 1056,
+   "oneeightzero": 1226,
+   "twozerofive": 1396,
+   "calories_kg":  3.08916462089552
+ },
+ {
+   "activity_hour": "Cross country snow skiing, slow",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Cross country skiing, moderate",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Cross country skiing, vigorous",
+   "onethreezero": 531,
+   "onefivefive": 633,
+   "oneeightzero": 735,
+   "twozerofive": 838,
+   "calories_kg":  1.85295717014925
+ },
+ {
+   "activity_hour": "Cross country skiing, racing",
+   "onethreezero": 826,
+   "onefivefive": 985,
+   "oneeightzero": 1144,
+   "twozerofive": 1303,
+   "calories_kg":  2.88267871044776
+ },
+ {
+   "activity_hour": "Cross country skiing, uphill",
+   "onethreezero": 974,
+   "onefivefive": 1161,
+   "oneeightzero": 1348,
+   "twozerofive": 1536,
+   "calories_kg":  3.39787798208955
+ },
+ {
+   "activity_hour": "Snow skiing, downhill skiing, light",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Downhill snow skiing, moderate",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Downhill snow skiing, racing",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Sledding, tobagganing, luge",
+   "onethreezero": 413,
+   "onefivefive": 493,
+   "oneeightzero": 572,
+   "twozerofive": 651,
+   "calories_kg":  1.44133935522388
+ },
+ {
+   "activity_hour": "Snow shoeing",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Snowmobiling",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "General housework",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Cleaning gutters",
+   "onethreezero": 295,
+   "onefivefive": 352,
+   "oneeightzero": 409,
+   "twozerofive": 465,
+   "calories_kg":  1.02972154029851
+ },
+ {
+   "activity_hour": "Painting",
+   "onethreezero": 266,
+   "onefivefive": 317,
+   "oneeightzero": 368,
+   "twozerofive": 419,
+   "calories_kg":  0.927494089552239
+ },
+ {
+   "activity_hour": "Sit, playing with animals",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Walk / run, playing with animals",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Bathing dog",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Mowing lawn, walk, power mower",
+   "onethreezero": 325,
+   "onefivefive": 387,
+   "oneeightzero": 449,
+   "twozerofive": 512,
+   "calories_kg":  1.13262599402985
+ },
+ {
+   "activity_hour": "Mowing lawn, riding mower",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Walking, snow blower",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Riding, snow blower",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Shoveling snow by hand",
+   "onethreezero": 354,
+   "onefivefive": 422,
+   "oneeightzero": 490,
+   "twozerofive": 558,
+   "calories_kg":  1.23485344477612
+ },
+ {
+   "activity_hour": "Raking lawn",
+   "onethreezero": 254,
+   "onefivefive": 303,
+   "oneeightzero": 351,
+   "twozerofive": 400,
+   "calories_kg":  0.885519904477612
+ },
+ {
+   "activity_hour": "Gardening, general",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Bagging grass, leaves",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Watering lawn or garden",
+   "onethreezero": 89,
+   "onefivefive": 106,
+   "oneeightzero": 123,
+   "twozerofive": 140,
+   "calories_kg":  0.310067367164179
+ },
+ {
+   "activity_hour": "Weeding, cultivating garden",
+   "onethreezero": 266,
+   "onefivefive": 317,
+   "oneeightzero": 368,
+   "twozerofive": 419,
+   "calories_kg":  0.927494089552239
+ },
+ {
+   "activity_hour": "Carpentry, general",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Carrying heavy loads",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "Carrying moderate loads upstairs",
+   "onethreezero": 472,
+   "onefivefive": 563,
+   "oneeightzero": 654,
+   "twozerofive": 745,
+   "calories_kg":  1.64782526567164
+ },
+ {
+   "activity_hour": "General cleaning",
+   "onethreezero": 207,
+   "onefivefive": 246,
+   "oneeightzero": 286,
+   "twozerofive": 326,
+   "calories_kg":  0.721008179104478
+ },
+ {
+   "activity_hour": "Cleaning, dusting",
+   "onethreezero": 148,
+   "onefivefive": 176,
+   "oneeightzero": 204,
+   "twozerofive": 233,
+   "calories_kg":  0.515199271641791
+ },
+ {
+   "activity_hour": "Taking out trash",
+   "onethreezero": 177,
+   "onefivefive": 211,
+   "oneeightzero": 245,
+   "twozerofive": 279,
+   "calories_kg":  0.61742672238806
+ },
+ {
+   "activity_hour": "Walking, pushing a wheelchair",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ },
+ {
+   "activity_hour": "Teach physical education,exercise class",
+   "onethreezero": 236,
+   "onefivefive": 281,
+   "oneeightzero": 327,
+   "twozerofive": 372,
+   "calories_kg":  0.823235629850746
+ }
+]
