@@ -38,9 +38,11 @@
   }
 }
 .info{
-  background: url("https://www.tofinoschooloffitness.com/wp-content/uploads/tofino-school-of-fitness-background1.jpg");
+  background: url("https://img.freepik.com/free-photo/healthy-food-background-autumn-fresh-vegetables-dark-stone-table-with-copy-space-top-view_127032-1953.jpg?size=626&ext=jpg");
+
+  /*background: url("https://www.tofinoschooloffitness.com/wp-content/uploads/tofino-school-of-fitness-background1.jpg");*/
   width: 100%;
-  height: 100%;
+  height: 90vh;
   background-size: cover;
   font-family: Arial;
   color: white;
@@ -53,12 +55,13 @@
 }
 
 .pageButton {
-  background: radial-gradient( #063445, black);
+  background: radial-gradient( whitesmoke, white);
   margin: 0 1px 0 1px;
+
 }
 
 .pageButton:hover {
-  background: radial-gradient( #063445, #399599);
+  background: radial-gradient( beige, lightpink);
   margin: 0 1px 0 1px;
 }
 
@@ -72,4 +75,7 @@
   background-color: rgba(255,255,255,0.3);
   background-blend-mode: lighten;
   background-size: cover;
+}
+.nav-item {
+  color: white;
 }

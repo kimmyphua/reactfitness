@@ -6,6 +6,7 @@ import axios from "axios";
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import SingleFood from "./SingleFood";
 import SingleExercise from "./SingleExercise";
+import NutritionTable from "./NutritionTable";
 
 
 function Profile() {
@@ -16,6 +17,11 @@ function Profile() {
     const [visible, setVisible] =useState(true)
     const [visibleEx, setVisibleEx] =useState(true)
     let date = value.toDateString()
+
+
+
+
+
 
 
         async function setUserStats() {
@@ -85,7 +91,9 @@ function Profile() {
 
 
                     <div className="bg-dark text-white mb-3">
-                        <h3 className="mt-2 font-monospace">B r e a k f a s t:</h3>
+                        <h3 className="mt-2 font-monospace">B r e a k f a s t:
+                            <NutritionTable
+                                user={user}/></h3>
                         {daily.filter(f => f.kind.includes("breakfast")).map((food,i) => (
 
                             <Row key={i} className="border-bottom border-light border-1 mx-1 ">

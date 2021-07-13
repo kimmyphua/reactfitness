@@ -18,6 +18,7 @@
     "react-event-calendar": "^0.3.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "recharts": "^2.0.10",
     "web-vitals": "^1.1.2"
   },
   "proxy": "http://localhost:8000",
@@ -46,7 +47,9 @@
     ]
   },
   "devDependencies": {
+    "@material-ui/data-grid": "^4.0.0-alpha.33",
     "@material-ui/icons": "^4.11.2",
+    "prop-types": "^15.7.2",
     "react-materialize": "^3.9.8"
   }
 }

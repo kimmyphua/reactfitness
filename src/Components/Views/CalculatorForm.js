@@ -1,6 +1,10 @@
-import React, {useRef, useState} from 'react';
-import {Modal, Container,Form,Col,Row} from 'react-bootstrap'
+import React, {useEffect, useRef, useState} from 'react';
+import Charts from "./Charts";
+import {Tab,Tabs, Modal, Container,Form,Col,Row,} from 'react-bootstrap'
 import axios from "axios";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import MTable from "./MTable";
 
 function CalculatorForm(user) {
     const [stat, setStat] = useState({})
@@ -8,15 +12,45 @@ function CalculatorForm(user) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const [disabled, setDisabled] = useState(true)
+    const [weightLog, setWeightLog] =useState({})
+    const [startDate, setStartDate] = useState(new Date());
+    const [graphData, setGraphData] = useState([])
+
+    async function initialize() {
+        let {data} = await axios.get("/api/auth/user", {
+            headers: {
+                authorization: `Bearer ${localStorage.token}`
+            }
+        })
+
+        await setGraphData(data.user.weight_log)
+        await setStat({
+            weight: data.user.weight,
+            height: data.user.height,
+            gender: data.user.gender,
+            activity: data.user.activity,
+            goal: data.user.goal,
+            age: data.user.age
+        })
+        await setWeightLog({
+         weight_kg: data.user.weight, date: new Date()
+        })
+    }
 
 
+
+    useEffect(() => {
+    initialize()
+    },[])
 
 
     async function updateStat(e){
         e.preventDefault()
         try{
-            await axios.put(`/api/user/edit/${user.user._id}`, stat);
+            await axios.put(`/api/user/edit/${user.user._id}`, stat)
+            await axios.post(`/api/user/weight/${user.user._id}` , weightLog)
             console.log(stat)
+            console.log(weightLog)
         }catch (e) {
             console.log(e.response)
         }
@@ -25,9 +59,54 @@ function CalculatorForm(user) {
     }
 
     async function change(e) {
-        e.preventDefault()
-        setStat(prevState => ({...prevState, [e.target.name]: e.target.value}))
+        await setStat(prevState => ({...prevState, [e.target.name]: e.target.value }))
+
     }
+
+    function setWeight(e){
+        setWeightLog(prevState => ({...prevState, weight_kg: e.target.value}))
+        setStat(prevState => ({...prevState, weight: e.target.value }))
+        console.log(weightLog)
+    }
+
+
+    async function changeWeight(e) {
+        e.preventDefault()
+        setWeightLog(prevState => ({...prevState, weight_kg: e.target.value}))
+
+
+    }
+
+    function onChange(){
+        setWeightLog(prevState => ({...prevState, date: startDate}))
+
+    }
+
+    useEffect(() => {
+        onChange()
+    }, [startDate])
+
+
+    useEffect(() => {
+
+    }, [startDate])
+
+
+    async function updateWeight(e){
+        e.preventDefault()
+        try{
+            await axios.post(`/api/user/weight/${user.user._id}` , weightLog)
+
+            console.log(weightLog)
+        }catch (e) {
+            console.log(e.response)
+        }
+
+        alert("Successfully Updated Weight!")
+    }
+
+
+
 
     async function bmr(){
         let value = 0
@@ -84,9 +163,10 @@ function CalculatorForm(user) {
         }
         setStat(prevState => ({...prevState, carbs: carbs, protein:protein, fat:fat}))
         setShow(true)
+
     }
 
-console.log(stat)
+
     /**Men: calories/day = 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) + 5
      Women: calories/day = 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) – 161
      Then, multiply your result by an activity factor — a number that represents different levels of activity (7):
@@ -105,107 +185,175 @@ console.log(stat)
 
     // console.log(user.user)
 
+    let newGraphData = graphData.slice().sort((a,b) =>(new Date(a.date) - new Date(b.date))).map(g => ({...g, date: g.date.split("T")[0] }))
 
 
     return (
-        <Container>
-            <Row className="info">
-            <Col md={6} className="p-4">
+        <Container className="info">
 
-            <Row >
-                <label>Weight (kg):</label>
-                <input
-                onChange={change}
-                type="number"
-                name="weight"
-                placeholder="enter weight"
-                required={true}/>
-            </Row>
-                    <Row className="justify-content-center text-left my-1 py-1">
-                    <label>Gender:</label>
-            <Form.Check
-                onChange={change}
-                type="radio"
-                className="w-25"
-                label="Female"
-                name="gender"
-                value="female"
-            />
-            <Form.Check
-                onChange={change}
-                type="radio"
-                className="w-25"
-                label="Male"
-                name="gender"
-                value="male"
-            />
-                    </Row>
-                <Row className="justify-content-center text-left my-1 py-1">
-                    <label>Height (cm):</label>
-            <input
-                onChange={change}
-                type="number"
-                name="height"
-                placeholder="enter height"
-                required={true}
-            />
-                </Row>
-                    <Row className="justify-content-center text-left my-1 py-1">
-                        <label>Age:</label>
-                        <input
-                            onChange={change}
-                            type="number"
-                            name="age"
-                            placeholder="enter age"
-                            required={true}
-                        />
-                    </Row>
-                    <Row className="justify-content-center text-left my-1 py-1">
-                        <label>Activity Level:</label>
-            <select
-                    name="activity"
-                    type="text"
-                    className="py-2 px-2 my-2"
-                    onChange={change}
-                    required={true}>
-                <option value={""}>Select Activity Level: </option>
-                <option value={"sedentary"}>Sedentary</option>
-                <option value={"lightly-active"}>Lightly Active</option>
-                <option value={"moderately-active"}>Moderately Active</option>
-                <option value={"very-active"}>Very Active</option>
+            <Row className="py-3 mx-3">
 
-            </select>
-                    </Row>
-                        <Row className="form-floating">
+                <Tabs
+                    style={{color: "white"}}
+                    defaultActiveKey="Calculator" id="uncontrolled-tab-example" className="mb-3 mx-2 bg-light fw-bolder" >
+
+                    <Tab eventKey="Calculator" title="Calculator " className=" ">
+                        <Row>
+                        <Col md={5}>
+                        <Row className="form-floating my-1 py-1 w-75 mx-5 ">
+
+
+                            <input
+                                onChange={setWeight}
+                                type="number"
+                                name="weight"
+                                className="form-control"
+                                id="floatingSelect"
+                                defaultValue={user.user.weight}
+                                placeholder="enter weight"
+                                required={true}/>
+
+                            <label className="text-muted mx-1 text-start" htmlFor="floatingSelect">Click to Change Weight (kg)</label>
+
+                        </Row>
+                        <Row className="form-floating my-1 py-1 w-75 mx-5 ">
+                            <select className="form-select"
+                                    id="floatingSelect"
+                                    aria-label="Select Gender"
+                                    name="gender"
+                                    defaultValue={user.user.gender}
+                                    onChange={change}
+                                    required={true}>
+
+                                <option> Click to change gender </option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+
+                            </select>
+                            <label className="text-dark text-start mx-2" htmlFor="floatingSelect">Current gender: <text className="text-danger fw-bold"> {user.user.gender}</text></label>
+                        </Row>
+
+                        <Row className="form-floating my-1 py-1 w-75 mx-5">
+
+                            <input
+                                onChange={change}
+                                type="number"
+                                name="height"
+                                className=" form-control"
+                                id="floatingSelect"
+                                defaultValue={user.user.height}
+                                placeholder="enter height"
+                                required={true}
+                            />
+
+                            <label className="text-muted mx-1 text-start" htmlFor="floatingSelect">Click to Change Height (cm)</label>
+                        </Row>
+                        <Row className="form-floating my-1 py-1 w-75 mx-5">
+
+                            <input
+                                onChange={change}
+                                type="number"
+                                className=" form-control"
+                                id="floatingSelect"
+                                name="age"
+                                defaultValue={user.user.age}
+                                placeholder=""
+                                required={true}
+                            />
+
+                            <label className="text-muted mx-2 text-start" htmlFor="floatingSelect">Click to Change Age (Years)</label>
+
+                        </Row>
+                        <Row className="form-floating my-1 py-1 w-75 mx-5">
+
+                            <select
+                                name="activity"
+                                type="text"
+                                className="form-select"
+                                onChange={change}
+                                required={true}>
+                                <option value={""}>Click to change Activity Level: </option>
+                                <option value={"sedentary"}>Sedentary</option>
+                                <option value={"lightly-active"}>Lightly Active</option>
+                                <option value={"moderately-active"}>Moderately Active</option>
+                                <option value={"very-active"}>Very Active</option>
+                            </select>
+                            <label className="text-dark text-start mx-2" htmlFor="floatingSelect">{user.user.activity}</label>
+
+                        </Row>
+                        <Row className="form-floating my-1 py-1 w-75 mx-5">
                             <select className="form-select"
                                     id="floatingSelect"
                                     aria-label="Select Goal"
                                     name="goal"
+                                    defaultValue={user.user.goal}
                                     onChange={change}
                                     required={true}>
-                                <option>Choose Option</option>
+                                <option>Click to change goal:</option>
                                 <option value="weight-loss">Weight Loss</option>
                                 <option value="maintain">Maintain</option>
                                 <option value="weight-gain">Weight-Gain</option>
                             </select>
-                            <label className="text-dark text-start mx-2" htmlFor="floatingSelect">Select Goal</label>
+                            <label className="text-dark text-start mx-2" htmlFor="floatingSelect">{user.user.goal}</label>
                         </Row>
 
                         <Row className="justify-content-center mt-2">
 
-                                <button
-                                    type="submit"
-                                    style={{width:"50%"}}
-                                    onClick={bmr}
-                                    className="btn btn-light border-dark border-2">Check Stats</button>
+                            <button
+                                type="submit"
+                                style={{width:"30%"}}
+                                onClick={bmr}
+                                className="btn btn-light border-dark border-2">Check</button>
 
                         </Row>
+
+                        </Col>
+                            <Col md={7}>
+                                <MTable newGraphData={newGraphData} />
+                            </Col>
+                    </Row>
+                    </Tab>
+
+
+                    <Tab eventKey="Weight" title="Weight">
+                        <Row>
+                    <Col md={4}>
+                        <h2>Log Weight:</h2>
+                        <DatePicker
+                            todayButton="Today"
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            maxDate={new Date()}
+                        />
+
+
+                        <form className="form-floating my-1 ">
+                            <input onChange={changeWeight}
+                                   type="number"
+                                   name="weight_kg"
+                                   placeholder="Enter New Weight"
+                                   id="label"
+                                   className="form-control"/>
+                            <label htmlFor="label" className="text-dark mx-2">New Weight (kg)</label>
+                        </form>
+
+                        <button onClick={updateWeight} className="btn btn-light border-1 border-dark">Submit</button>
+
                     </Col>
+                            <Col md={7}>
+                                <MTable newGraphData={newGraphData} />
+                            </Col>
+                        </Row>
+                    </Tab>
 
 
-                    <Col md={6} className="p-4">
+                    <Tab eventKey="overview" title="Overview" >
+                    <Charts
+                    graphData={graphData}
+                    newGraphData={newGraphData}/>
+                    </Tab>
+                </Tabs>
 
-                    </Col>
 
 
                 <Modal
@@ -230,6 +378,17 @@ console.log(stat)
                         <form className="form-floating my-1">
                             <input onChange={change}
                                    type="number"
+                                   name="daily_calorie"
+                                   disabled={disabled}
+                                   value={stat.daily_calorie ? stat.daily_calorie : user.user.daily_calorie}
+                                   placeholder="daily_calorie "
+                                   id="label"
+                                   className="form-control"/>
+                            <label htmlFor="label" className="text-dark mx-2">Daily Calorie Intake (kcal)</label>
+                        </form>
+                        <form className="form-floating my-1">
+                            <input onChange={change}
+                                   type="number"
                                    name="tdee"
                                    disabled={disabled}
                                    value={stat.tdee ? stat.tdee : user.user.tdee}
@@ -242,9 +401,9 @@ console.log(stat)
                         <form className="form-floating my-1">
                             <input onChange={change}
                                    type="number"
-                                   name="carb"
+                                   name="carbs"
                                    disabled={disabled}
-                                   value={stat.carbs? stat.carbs : user.user.carbs }
+                                   value={stat.carbs? stat.carbs : user.user.carbs}
                                    placeholder="Carbs Intake "
                                    id="label"
                                    className="form-control"/>
