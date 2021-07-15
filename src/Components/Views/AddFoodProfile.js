@@ -9,7 +9,7 @@ import FitnessCenterIcon from 'react-materialize';
 
 
 
-function AddFoodProfile({item,i,user}) {
+function AddFoodProfile({item,i,user,setUser,setMyFood}) {
 
 const [foodLog, setFoodLog] = useState({ date: new Date().toDateString()})
 const [quantity, setQuantity] = useState(1)
@@ -37,8 +37,7 @@ const [startDate, setStartDate] = useState(new Date());
     }
 
 
-    async function settingFood(e){
-
+    async function settingFood(){
         console.log(foodLog)
         // setQuantity(e.target.value)
         setFoodLog(prevState => ({...prevState,
@@ -53,11 +52,17 @@ const [startDate, setStartDate] = useState(new Date());
         protein: Math.floor(item.nf_protein*quantity),
         sugars: Math.floor(item.nf_sugars*quantity),
         fiber: Math.floor(item.nf_dietary_fiber*quantity),
-        kind:e?.target?.value ? e.target.value : "breakfast",
+        kind: "breakfast"
        }))
-
-
     }
+
+
+    async function settingKind(e) {
+        setFoodLog(prevState => ({...prevState,  kind: e.target.value,
+        }))
+    }
+
+    console.log(foodLog)
 
     async function logFood(e){
         e.preventDefault()
@@ -68,9 +73,25 @@ const [startDate, setStartDate] = useState(new Date());
         }catch (e) {
             console.log(e.response)
         }
+        setUserStats()
     }
 
+    async function setUserStats() {
+        try {
+            let {data} = await axios.get("/api/auth/user", {
+                headers: {
+                    authorization: `Bearer ${localStorage.token}`
+                }
+            })
 
+            setMyFood(data.user.food_log)
+            setShow(false)
+
+        } catch (e) {
+            setUser({})
+            localStorage.removeItem("token")
+        }
+    }
 
 
 
@@ -117,7 +138,7 @@ const [startDate, setStartDate] = useState(new Date());
                         </span>
 
                             <form className="form-floating my-1">
-                         <select onChange={settingFood}
+                         <select onChange={settingKind}
                                  name="kind"
                                  type="text"
                                  defaultValue={"breakfast"}

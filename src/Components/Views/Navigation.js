@@ -19,15 +19,15 @@ function Navigation({setUser, setAuth,user}) {
             <Navbar.Collapse id="basic-navbar-nav" className="bg-white">
 
                 <Nav className="ml-auto">
-                    <NavLink to="/home" className="navButton font-monospace nav-link">Home</NavLink>
-                    <NavLink to="/" className="navButton font-monospace nav-link"> About</NavLink>
-                    <NavLink to="/calculator" className="navButton font-monospace nav-link">Calculator</NavLink>
+                    <NavLink to="/" className="navButton font-monospace nav-link">Home</NavLink>
+
+
                 </Nav>
                 {user ? <>
 
-                    <NavLink to="/profile" className="navButton font-monospace text-dark nav-link">{user.name}'s
-                        Page</NavLink>
-                    <NavLink to="/exercise" className="navButton font-monospace text-dark nav-link">Exercise</NavLink>
+                    <NavLink to="/profile" className="navButton font-monospace text-dark nav-link">{user.name?.toUpperCase()}
+                        </NavLink>
+                    <NavLink to="/calculator" className="navButton font-monospace text-dark nav-link">Data</NavLink>
                     <NavLink to="/login" onClick={logout}
                              className="navButton font-monospace text-dark nav-link">Logout</NavLink>
 
@@ -39,12 +39,7 @@ function Navigation({setUser, setAuth,user}) {
 
 
             </Navbar.Collapse>
-            {/*{user ?*/}
-            {/*    <Nav className=" align-self-end px-3">*/}
-            {/*        <h4>Welcome Back, {user.name}!</h4>*/}
-            {/*    </Nav> : null*/}
 
-            {/*}*/}
         </Navbar>
             );
 }

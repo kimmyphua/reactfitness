@@ -5,6 +5,7 @@ import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import MTable from "./MTable";
+import NutritionPieChart from "./NutritionPieChart";
 
 function CalculatorForm(user) {
     const [stat, setStat] = useState({})
@@ -15,6 +16,7 @@ function CalculatorForm(user) {
     const [weightLog, setWeightLog] =useState({})
     const [startDate, setStartDate] = useState(new Date());
     const [graphData, setGraphData] = useState([])
+    const [cpf, setCPF] =useState([])
 
     async function initialize() {
         let {data} = await axios.get("/api/auth/user", {
@@ -22,7 +24,8 @@ function CalculatorForm(user) {
                 authorization: `Bearer ${localStorage.token}`
             }
         })
-
+        // console.log(data.user.weightLog)
+        await setCPF([{name: "carbs", value: data.user.carbs}, {name: "protein", value: data.user.protein}, {name: "fat", value: data.user.fat}])
         await setGraphData(data.user.weight_log)
         await setStat({
             weight: data.user.weight,
@@ -33,22 +36,37 @@ function CalculatorForm(user) {
             age: data.user.age
         })
         await setWeightLog({
-         weight_kg: data.user.weight, date: new Date()
+         weight_kg: data.user.weight, date: new Date().toDateString()
         })
     }
 
-
+    console.log(user)
 
     useEffect(() => {
     initialize()
     },[])
 
 
+    async function weightInitialize() {
+        let {data} = await axios.get("/api/auth/user", {
+            headers: {
+                authorization: `Bearer ${localStorage.token}`
+            }
+        })
+
+        setGraphData(data.user.weight_log)
+
+    }
+
+
+
+
+
     async function updateStat(e){
         e.preventDefault()
         try{
             await axios.put(`/api/user/edit/${user.user._id}`, stat)
-            await axios.post(`/api/user/weight/${user.user._id}` , weightLog)
+            await axios.put(`/api/user/weight/${user.user._id}` , weightLog)
             console.log(stat)
             console.log(weightLog)
         }catch (e) {
@@ -56,6 +74,7 @@ function CalculatorForm(user) {
         }
 
         alert("Successfully Updated Stats!")
+        weightInitialize()
     }
 
     async function change(e) {
@@ -78,7 +97,7 @@ function CalculatorForm(user) {
     }
 
     function onChange(){
-        setWeightLog(prevState => ({...prevState, date: startDate}))
+        setWeightLog(prevState => ({...prevState, date: startDate.toDateString()}))
 
     }
 
@@ -95,14 +114,16 @@ function CalculatorForm(user) {
     async function updateWeight(e){
         e.preventDefault()
         try{
-            await axios.post(`/api/user/weight/${user.user._id}` , weightLog)
+            await axios.put(`/api/user/weight/${user.user._id}` , weightLog)
 
-            console.log(weightLog)
+
         }catch (e) {
             console.log(e.response)
         }
-
-        alert("Successfully Updated Weight!")
+        console.log(weightLog)
+        alert("Successfully Logged Weight!")
+        form?.current?.reset()
+        weightInitialize()
     }
 
 
@@ -182,11 +203,7 @@ function CalculatorForm(user) {
      Proteins: 10–35% of total calories
      **/
 
-
-    // console.log(user.user)
-
-    let newGraphData = graphData.slice().sort((a,b) =>(new Date(a.date) - new Date(b.date))).map(g => ({...g, date: g.date.split("T")[0] }))
-
+    console.log(graphData)
 
     return (
         <Container className="info">
@@ -195,9 +212,9 @@ function CalculatorForm(user) {
 
                 <Tabs
                     style={{color: "white"}}
-                    defaultActiveKey="Calculator" id="uncontrolled-tab-example" className="mb-3 mx-2 bg-light fw-bolder" >
+                    defaultActiveKey="Calculator" id="uncontrolled-tab-example" className="text-dark mb-3 mx-2 bg-light fw-bolder" >
 
-                    <Tab eventKey="Calculator" title="Calculator " className=" ">
+                    <Tab eventKey="Calculator" title="Calculator " tabClassName="text-dark">
                         <Row>
                         <Col md={5}>
                         <Row className="form-floating my-1 py-1 w-75 mx-5 ">
@@ -309,13 +326,13 @@ function CalculatorForm(user) {
 
                         </Col>
                             <Col md={7}>
-                                <MTable newGraphData={newGraphData} />
+                                <MTable user={user} newGraphData={graphData} setGraphData={setGraphData} />
                             </Col>
                     </Row>
                     </Tab>
 
 
-                    <Tab eventKey="Weight" title="Weight">
+                    <Tab eventKey="Weight" title="Weight" tabClassName="text-dark">
                         <Row>
                     <Col md={4}>
                         <h2>Log Weight:</h2>
@@ -327,7 +344,7 @@ function CalculatorForm(user) {
                         />
 
 
-                        <form className="form-floating my-1 ">
+                        <form ref={form} className="form-floating my-1 ">
                             <input onChange={changeWeight}
                                    type="number"
                                    name="weight_kg"
@@ -341,16 +358,21 @@ function CalculatorForm(user) {
 
                     </Col>
                             <Col md={7}>
-                                <MTable newGraphData={newGraphData} />
+                                <MTable newGraphData={graphData} setGraphData={setGraphData}   />
                             </Col>
                         </Row>
                     </Tab>
 
 
-                    <Tab eventKey="overview" title="Overview" >
+                    <Tab eventKey="overview" title="Overview" tabClassName="text-dark">
                     <Charts
                     graphData={graphData}
-                    newGraphData={newGraphData}/>
+                    newGraphData={graphData}/>
+                    </Tab>
+
+                    <Tab eventKey="nutrition" title="Nutrition" tabClassName="text-dark">
+                        <NutritionPieChart
+                            cpf={cpf}/>
                     </Tab>
                 </Tabs>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -15,6 +15,9 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import TableHead from '@material-ui/core/TableHead';
+import {Button} from "@material-ui/core";
+import axios from "axios";
+import DeleteWeight from "./DeleteWeight";
 
 const useStyles1 = makeStyles((theme) => ({
     root: {
@@ -86,11 +89,12 @@ TablePaginationActions.propTypes = {
 
 const useStyles2 = makeStyles({
     table: {
-        maxWidth: 450,
+        Width: 450,
     },
 });
 
-export default function MTable({newGraphData}) {
+export default function MTable({newGraphData ,setGraphData}) {
+
     const classes = useStyles2();
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -106,6 +110,11 @@ export default function MTable({newGraphData}) {
         setPage(0);
     };
 
+
+
+
+console.log(newGraphData)
+
     return (
         <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="custom pagination table">
@@ -113,24 +122,51 @@ export default function MTable({newGraphData}) {
                                         <TableRow>
                                            <TableCell align="center" > Date (YYYY-MM-DD) </TableCell>
                                           <TableCell align="center">Weight (kg)</TableCell>
-                                        {/*<TableCell align="left"> x </TableCell>*/}
+                                        <TableCell align="center">  </TableCell>
                                     </TableRow>
                                 </TableHead>
                 <TableBody>
-                    {(rowsPerPage > 0
-                            ? newGraphData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                            : newGraphData
-                    ).map((data,i) => (
-                        <TableRow key={i}>
-                            <TableCell align="center">
-                                {data.date}
-                            </TableCell>
-                            <TableCell align="center">
-                                {data.weight_kg}
-                            </TableCell>
 
-                        </TableRow>
-                    ))}
+                    {newGraphData.length > 0 ?
+
+                        (rowsPerPage > 1
+                                ? newGraphData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).sort((a,b) =>(new Date(a.date) - new Date(b.date)))
+                                : newGraphData
+                        ).map((data,i) => (
+                            <TableRow key={i}>
+                                <TableCell align="center">
+                                    {data?.date}
+                                </TableCell>
+                                <TableCell align="center">
+                                    {data?.weight_kg}
+                                </TableCell>
+                                <TableCell align="center">
+                                    <DeleteWeight data={data}
+                                        // weightInitialize={weightInitialize}
+                                                  setGraphData={setGraphData}/>
+
+                                </TableCell>
+                            </TableRow>
+                        ))
+
+                        :
+
+                        <TableRow>
+                            <TableCell align="center">
+                                {newGraphData.date}
+                            </TableCell>
+                            <TableCell align="center">
+                                {newGraphData.weight_kg}
+                            </TableCell>
+                            <TableCell align="center">
+                                <DeleteWeight data={newGraphData}
+                                    // weightInitialize={weightInitialize}
+                                              setGraphData={setGraphData}/>
+
+                            </TableCell>
+                        </TableRow>}
+
+
 
                     {emptyRows > 0 && (
                         <TableRow style={{ height: 53 * emptyRows }}>
@@ -160,54 +196,3 @@ export default function MTable({newGraphData}) {
         </TableContainer>
     );
 }
-
-
-
-
-// import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// import Table from '@material-ui/core/Table';
-// import TableBody from '@material-ui/core/TableBody';
-// import TableCell from '@material-ui/core/TableCell';
-// import TableContainer from '@material-ui/core/TableContainer';
-// import TableHead from '@material-ui/core/TableHead';
-// import TableRow from '@material-ui/core/TableRow';
-// import Paper from '@material-ui/core/Paper';
-//
-// const useStyles = makeStyles({
-//     table: {
-//         maxWidth: 650,
-//     },
-// });
-//
-//
-// export default function MTable({newGraphData}) {
-//     const classes = useStyles();
-//
-//     return (
-//         <TableContainer component={Paper}>
-//             <Table className={classes.table} aria-label="simple table" >
-//                 <TableHead>
-//                     <TableRow>
-//                         <TableCell align="left" > Date </TableCell>
-//                         <TableCell align="left">Weight (kg)</TableCell>
-//                         <TableCell align="left"> x </TableCell>
-//
-//                     </TableRow>
-//                 </TableHead>
-//                 <TableBody>
-//                     {newGraphData.map((data,i) => (
-//                         <TableRow key={i}>
-//                             <TableCell component="th" scope="row">
-//                                 {data.date}
-//                             </TableCell>
-//                             <TableCell align="left">{data.weight_kg}</TableCell>
-//                             <TableCell align="left"> x </TableCell>
-//
-//                         </TableRow>
-//                     ))}
-//                 </TableBody>
-//             </Table>
-//         </TableContainer>
-//     );
-// }

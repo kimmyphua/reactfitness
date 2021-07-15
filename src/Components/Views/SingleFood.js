@@ -151,8 +151,12 @@ function SingleFood({food, setUser, setMyFood}) {
 
             </Modal>
 
-            <DeleteIcon onClick={()=>deleteFood()} />
-            <EditIcon onClick={()=>handleShow()} />
+            <DeleteIcon
+                style={{cursor:"pointer"}}
+                onClick={()=>deleteFood()} />
+            <EditIcon
+                style={{cursor:"pointer"}}
+                onClick={()=>handleShow()} />
 
         </>
     );

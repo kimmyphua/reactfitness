@@ -3,7 +3,7 @@
 }
 
 .container {
-    height: 70vh;
+    height: 100vh;
 }
 
 .registrationFormContainer {
@@ -18,11 +18,11 @@
 
 .inputStyle {
     padding: 10px 20px 10px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .inputStyle:hover {
     background: lightblue;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }

@@ -2,12 +2,12 @@ import React, {useRef, useState} from "react";
 import {NavLink, Redirect} from "react-router-dom";
 import styles from "./Login.module.css";
 import axios from "axios";
-import {Form} from "react-bootstrap";
+import {Form, Row, Button, Col,Container} from "react-bootstrap";
 
 
 function Login({auth, setAuth}) {
-
-
+    const [email, setEmail] = useState("")
+    const [visible, setVisible] = useState(false)
     const [data, setData] = useState({})
     const form = useRef(null)
 
@@ -32,14 +32,28 @@ function Login({auth, setAuth}) {
     }
 
     if(auth){
-        return < Redirect to="/home" />
+        return < Redirect to="/profile" />
     }
 
-    console.log("hi123")
+
+   async function forgotPassword(){
+    try{
+        await axios.post('/api/auth/forgot-password', {email})
+        alert("Please Check Email to Reset Password")
+    }catch (e) {
+        console.log(e.response)
+    }
+    }
+
+
+
+
 
     return (
-        <div>
+        <Container>
+            <Row>
             <div className={`${styles.container} text-center container-fluid d-flex align-items-center justify-content-center`}>
+
                 <div className={styles.loginFormContainer}>
 
                     <fieldset className="border p-3 rounded">
@@ -80,20 +94,55 @@ function Login({auth, setAuth}) {
                                 <button type="submit" className="btn border-dark text-center mx-2">
                                     Login
                                 </button>
-
                                 <button className="btn border-dark text-dark text-center mx-2">
                                     <NavLink to="/register">New User</NavLink>
                                 </button>
+
                             </div>
                         </Form>
+
+
+
+
                     </fieldset>
 
                 </div>
             </div>
 
+</Row>
+<Row>
+                <div >
+                    <button onClick={()=>setVisible(!visible)} className="my-1 btn text-secondary text-decoration-underline text-center mx-2">
+                        Forgot Password?
+                    </button>
+                    {visible ?
+                            <Row className="form-floating my-1 py-1 justify-content-center">
+                        <Col md={4}>
+                                <input
+                                    onChange={(e)=>{setEmail(e.target.value)}}
+                                        type="email"
+                                    className=" form-control py-3"
+                                    placeholder="Please Enter Email"
+                                    id="floatingSelect"
+                                    required={true}
+                                />
+
+                                <Button className="border-dark border-1 bg-white text-dark" onClick={forgotPassword}> Reset </Button>
+                        </Col>
+                            </Row>
+
+                        : ""
+
+                    }
+                </div>
+</Row>
 
 
-        </div>
+
+
+
+
+        </Container>
     );
 }
 

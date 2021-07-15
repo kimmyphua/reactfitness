@@ -13,17 +13,12 @@ import {
 
 
 export default function Charts({newGraphData}) {
-
-    //do i WANNA DO THIS??
-    let unique =newGraphData.reduce((acc, current) => {
-        const x = acc.find(item => item.date === current.date)
-        if(!x){
-            return acc.concat([current]);
-        } else {
-            return acc;
-        }
-    }, [])
-    console.log(unique)
+let dataKey
+    if(newGraphData.length >1){
+        dataKey = newGraphData.sort((a,b) =>(new Date(a.date) - new Date(b.date))).map(g => ({...g, date: g.date.split("T")[0] }))
+    }else{
+        dataKey = newGraphData.map(g => ({...g, date: g.date.split("T")[0] }))
+    }
 
 
 
@@ -34,7 +29,7 @@ export default function Charts({newGraphData}) {
         <LineChart
             width={800}
             height={300}
-            data={newGraphData}
+            data={dataKey}
             className="bg-dark text-dark"
             margin={{
                 top: 5,
@@ -46,13 +41,15 @@ export default function Charts({newGraphData}) {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="date" />
             <YAxis />
-            <Tooltip/>
+            <Tooltip
+                />
             <Legend />
             <Line
                 type="monotone"
                 dataKey="weight_kg"
                 stroke="#8884d8"
                 activeDot={{ r: 4 }}
+
             />
             {/*<Line type="monotone" dataKey="uv" stroke="#82ca9d" />*/}
         </LineChart>

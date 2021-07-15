@@ -2,14 +2,16 @@ import React, {useState, useEffect} from "react";
 import './App.css';
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom"
 import Profile from "./Components/Views/Profile"
-import Home from "./Components/Views/Home"
+import Home from "./Components/Landing/Home"
 import Login from "./Components/Auth/Login";
 import Register from "./Components/Auth/Register";
 import axios from "axios";
 import Navigation from "./Components/Views/Navigation";
 import CalculatorForm from "./Components/Views/CalculatorForm";
-import Statistic from "./Components/Views/Statistic";
 import Exercise from "./Components/Views/Exercise";
+import LandingPage from "./Components/Landing/LandingPage";
+import Settings from "./Components/Auth/Settings";
+import ResetPwd from "./Components/Auth/ResetPwd";
 
 function App() {
 
@@ -45,8 +47,11 @@ function App() {
     <BrowserRouter>
         <Navigation setAuth={setAuth} setUser={setUser} user={user} />
       <Switch>
-          <Route path="/calculator" exact>
-              <CalculatorForm auth={auth} user={user}/>
+          <Route path="/" exact>
+              <LandingPage auth={auth} user={user} setUser={setUser}/>
+          </Route>
+          <Route path="/reset-password/:token" exact>
+              <ResetPwd auth={auth} setAuth={setAuth}/>
           </Route>
           <Route path="/login" exact>
               <Login auth={auth} setAuth={setAuth}/>
@@ -54,13 +59,11 @@ function App() {
           <Route path="/register" exact>
               <Register auth={auth} setAuth={setAuth}/>
           </Route>
-          <Route path="/test" exact>
-              <Statistic/>
-          </Route>
-          <PrivateRouter auth={auth} user={user} path="/home" exact Component={Home} />
-          <PrivateRouter auth={auth} user={user} path="/profile" exact Component={Profile} />
-          <PrivateRouter auth={auth} user={user} path="/exercise" exact Component={Exercise} />
 
+          <PrivateRouter auth={auth} user={user} path="/exercise" exact Component={Exercise} />
+          <PrivateRouter auth={auth} user={user} path="/profile" exact Component={Profile} />
+          <PrivateRouter auth={auth} user={user} path="/calculator" exact Component={CalculatorForm} />
+          {/*<PrivateRouter auth={auth} user={user} path="/settings" exact Component={Settings} />*/}
       </Switch>
     </BrowserRouter>
     </div>

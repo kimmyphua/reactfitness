@@ -7,6 +7,11 @@ import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import SingleFood from "./SingleFood";
 import SingleExercise from "./SingleExercise";
 import NutritionTable from "./NutritionTable";
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
+import Exercise from "./Exercise";
+
 
 
 function Profile() {
@@ -16,9 +21,18 @@ function Profile() {
     const [value, onChange] = useState(new Date());
     const [visible, setVisible] =useState(true)
     const [visibleEx, setVisibleEx] =useState(true)
+
     let date = value.toDateString()
+    const [state, setState] = useState({
+        checkedA: true,
+        checkedB: true,
+    });
+
+    const handleChange = (event) => {
+        setState({ ...state, [event.target.name]: event.target.checked });
 
 
+    };
 
 
 
@@ -88,12 +102,24 @@ function Profile() {
                         value={value}
                         className="w-100 "
                         />
-
+                    <Row className="justify-content-center pt-1">
+                        <Col md={6}>
+                    <NutritionTable
+                        user={user}
+                    setMyFood={setMyFood}
+                    setUser={setUser}/>
+                    </Col>
+                        <Col md={6}>
+                    <Exercise
+                        user={user}
+                    setMyExercise={setMyExercise}
+                    setUser={setUser}/>
+                        </Col>
+                     </Row>
 
                     <div className="bg-dark text-white mb-3">
                         <h3 className="mt-2 font-monospace">B r e a k f a s t:
-                            <NutritionTable
-                                user={user}/></h3>
+                            </h3>
                         {daily.filter(f => f.kind.includes("breakfast")).map((food,i) => (
 
                             <Row key={i} className="border-bottom border-light border-1 mx-1 ">
@@ -177,14 +203,36 @@ function Profile() {
                 <Col md={6}>
 
             <Card style={{ width: '22rem', opacity: "0.9" }}>
-                <Row>
-                    <Col md={6}>
-                    <Button className="bg-dark" onClick={() => setVisible(!visible)}> Toggle Nutrition </Button>
-                    </Col>
-                    <Col md={6}>
-                    <Button className="bg-dark" onClick={() => setVisibleEx(!visibleEx)}> Toggle Exercise </Button>
-                    </Col>
+
+
+                        <FormGroup className="mt-2">
+                            <Row>
+                            <Col md={6}>
+                            <FormControlLabel
+                                control={<Switch checked={state.checkedA} onChange={handleChange} onClick={()=>setVisible(!visible)} name="checkedA" />}
+                                label="Food Log"
+                            />
+                            </Col>
+                            <Col md={6}>
+                            <FormControlLabel
+                                control={
+                                    <Switch
+                                        checked={state.checkedB}
+                                        onChange={handleChange}
+                                        onClick={()=>setVisibleEx(!visibleEx)}
+                                        name="checkedB"
+                                        color="primary"
+                                    />
+                                }
+                                label="Exercise"
+                            />
+                            </Col>
                 </Row>
+
+                        </FormGroup>
+
+
+
                 <Card.Img variant="top"
                           style={{
                               marginTop: "10px",
@@ -247,7 +295,7 @@ function Profile() {
                            {dailyExercise.map( (ex, i) =>(
                                 <ListGroup
                                     horizontal='sm'
-                                    variant="flush"
+                                    // variant="flush"
                                     key={i}
                                     className="fw-light text-start border-muted border-bottom">
 
@@ -270,16 +318,8 @@ function Profile() {
 
                     : <> </>}
 
-
-
-
-
-
             </Card>
-
-
                 </Col>
-
 
             </Row>
         </Container>

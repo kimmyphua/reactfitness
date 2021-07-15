@@ -10,7 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 import {Button, Col, Modal, Row} from "react-bootstrap";
 import axios from "axios";
-import AddFoodProfile from "./AddFoodProfile";
+import AddFood from "./AddFood";
 
 const useStyles = makeStyles({
     table: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function NutritionTable({user, setMyFood, setUser}) {
+export default function Home() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const [food, setFood] = useState([])
@@ -31,11 +31,6 @@ export default function NutritionTable({user, setMyFood, setUser}) {
         setShow(true)
         getFood()
     }
-
-
-
-
-
 
 
     async function getFood() {
@@ -64,31 +59,31 @@ export default function NutritionTable({user, setMyFood, setUser}) {
     return (
 
         <div>
-            <Button className="bg-white border-dark border-1 text-dark" onClick={handleShow}>Add Food</Button>
+            <Button className="bg-white border-dark border-1 text-dark" onClick={handleShow}>Try Food Demo</Button>
             <Modal show={show} onHide={handleClose} size="xl">
-<Row className="mx-5">
+                <Row className="mx-5">
                     <Col md={8}>
-                <form onSubmit={handleSubmit} className="mb-2">
+                        <form onSubmit={handleSubmit} className="mb-2">
 
-                    <input
-                        type="text"
-                        placeholder="What did you eat?"
-                        className="py-1 px-2 rounded-1-lg mt-2"
-                        onChange={(e) => setKey(e.target.value)}
-                    />
-                    <button
-                        type="submit"
-                        className="btn btn-light border border-dark mx-3 py-1 px-2"
-                    > Search
-                    </button>
-                </form>
+                            <input
+                                type="text"
+                                placeholder="What did you eat?"
+                                className="py-1 px-2 rounded-1-lg mt-2"
+                                onChange={(e) => setKey(e.target.value)}
+                            />
+                            <button
+                                type="submit"
+                                className="btn btn-light border border-dark mx-3 py-1 px-2"
+                            > Search
+                            </button>
+                        </form>
                     </Col>
-    <Col md={4}>
-    <Row className=" justify-content-end mt-2">
-        <button className="bg-white border-0 text-end" onClick={()=>setShow(false)}> <CloseOutlinedIcon /> </button>
-    </Row>
-    </Col>
-</Row>
+                    <Col md={4}>
+                        <Row className=" justify-content-end mt-2">
+                            <button className="bg-white border-0 text-end" onClick={()=>setShow(false)}> <CloseOutlinedIcon /> </button>
+                        </Row>
+                    </Col>
+                </Row>
                 {visible ?
                     <form onSubmit={handleSubmit}>
 
@@ -145,46 +140,44 @@ export default function NutritionTable({user, setMyFood, setUser}) {
 
 
                 <TableContainer component={Paper}>
-            <Table className={classes.table} size="small" aria-label="a dense table">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>#</TableCell>
-                        <TableCell align="left">Name</TableCell>
-                        <TableCell align="left">Brand </TableCell>
-                        <TableCell align="left">Calories (kcal)</TableCell>
-                        <TableCell align="left">Serving (g)</TableCell>
-                        <TableCell align="left">  </TableCell>
-                    </TableRow>
+                    <Table className={classes.table} size="small" aria-label="a dense table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>#</TableCell>
+                                <TableCell align="left">Name</TableCell>
+                                <TableCell align="left">Brand </TableCell>
+                                <TableCell align="left">Calories (kcal)</TableCell>
+                                <TableCell align="left">Serving (g)</TableCell>
+                                <TableCell align="left">  </TableCell>
+                            </TableRow>
 
 
-                </TableHead>
-                <TableBody>
-                    {food.map((item, i) => (
-                        <TableRow key={i}>
-                            <TableCell component="th" scope="row">
-                        {i + 1}
-                            </TableCell>
-                            <TableCell align="left">{item.item_name}</TableCell>
-                            <TableCell align="left">{item.brand_name}</TableCell>
-                            <TableCell align="left">{item.nf_calories}</TableCell>
-                            <TableCell align="left">{item.nf_serving_weight_grams}</TableCell>
-                            <TableCell align="left">
-                                <AddFoodProfile
-                                    item={item}
-                                    user={user}
-                                    i={i}
-                                    setMyFood={setMyFood}
-                                    setUser={setUser}/>
-                            </TableCell>
-                        </TableRow>
-                    ))}
+                        </TableHead>
+                        <TableBody>
+                            {food.map((item, i) => (
+                                <TableRow key={i}>
+                                    <TableCell component="th" scope="row">
+                                        {i + 1}
+                                    </TableCell>
+                                    <TableCell align="left">{item.item_name}</TableCell>
+                                    <TableCell align="left">{item.brand_name}</TableCell>
+                                    <TableCell align="left">{item.nf_calories}</TableCell>
+                                    <TableCell align="left">{item.nf_serving_weight_grams}</TableCell>
+                                    <TableCell align="left">
+                                        <AddFood
+                                            item={item}
+                                            i={i}
+                                            />
+                                    </TableCell>
+                                </TableRow>
+                            ))}
 
 
-                </TableBody>
-            </Table>
-        </TableContainer>
+                        </TableBody>
+                    </Table>
+                </TableContainer>
 
             </Modal>
-            </div>
+        </div>
     );
 }

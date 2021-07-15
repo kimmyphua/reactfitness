@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import {Col, Form, Modal, Row} from "react-bootstrap";
 
 
-function ExerciseView({ex, user,i, setMyExercise, setUser}) {
+function ExerciseViewDemo({ex, i}) {
     const [myEx, setMyEx] = useState({})
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -14,7 +14,7 @@ function ExerciseView({ex, user,i, setMyExercise, setUser}) {
 
     async function change(){
 
-        setMyEx(prevState => ({...prevState, activity_hour: ex.activity_hour,calories_kg: ex.calories_kg*user.weight*quantity, date: startDate.toDateString() }))
+        setMyEx(prevState => ({...prevState, activity_hour: ex.activity_hour,calories_kg: ex.calories_kg*60*quantity, date: startDate.toDateString() }))
         console.log(myEx)
 
     }
@@ -23,14 +23,17 @@ function ExerciseView({ex, user,i, setMyExercise, setUser}) {
 
     async function postExercise(e) {
         e.preventDefault()
+        alert("please log in or register to continue")
         // console.log(myExercise)
-        try {
-             await axios.put(`/api/user/exercise/${user._id}`, myEx )
-            console.log(myEx)
-        } catch (e) {
-            console.log(e.response)
-        }
-        setUserStats()
+        // try {
+        //     await axios.put(`/api/user/exercise/${user._id}`, myEx )
+        //     console.log(myEx)
+        //     alert("Success")
+        // } catch (e) {
+        //     console.log(e.response)
+        //     alert("please log in to continue")
+        // }
+        // setUserStats()
     }
 
 
@@ -50,22 +53,22 @@ function ExerciseView({ex, user,i, setMyExercise, setUser}) {
         change()
     }
 
-    async function setUserStats() {
-        try {
-            let {data} = await axios.get("/api/auth/user", {
-                headers: {
-                    authorization: `Bearer ${localStorage.token}`
-                }
-            })
-
-            setMyExercise(data.user.exercise_log)
-            setShow(false)
-
-        } catch (e) {
-            setUser({})
-            localStorage.removeItem("token")
-        }
-    }
+    // async function setUserStats() {
+    //     try {
+    //         let {data} = await axios.get("/api/auth/user", {
+    //             headers: {
+    //                 authorization: `Bearer ${localStorage.token}`
+    //             }
+    //         })
+    //         //
+    //         // setMyExercise(data.user.exercise_log)
+    //         setShow(false)
+    //
+    //     } catch (e) {
+    //         setUser({})
+    //         localStorage.removeItem("token")
+    //     }
+    // }
 
     return (
         <>
@@ -85,8 +88,8 @@ function ExerciseView({ex, user,i, setMyExercise, setUser}) {
                             shouldCloseOnSelect={false}
                         />
 
-                            <h6> {ex.activity_hour}</h6>
-                            <h6> Total Calories: {Math.floor(ex.calories_kg*user.weight*quantity)} kcal</h6>
+                        <h6> {ex.activity_hour}</h6>
+                        <h6> Total Calories:(Calculated based on 60kg person) {Math.floor(ex.calories_kg*60*quantity)} kcal</h6>
 
                         <span>
 
@@ -124,14 +127,14 @@ function ExerciseView({ex, user,i, setMyExercise, setUser}) {
 
             <td>{i+1}</td>
             <td> {ex.activity_hour}</td>
-            <td> {Math.floor(ex.calories_kg*user.weight)} kcal</td>
+            <td> {Math.floor(ex.calories_kg*60)} kcal</td>
             <td>
 
-                    <button
-                        onClick={handleShow}
-                        className="btn btn-light border border-dark mx-3 py-1 px-2"
-                    > Add
-                    </button>
+                <button
+                    onClick={handleShow}
+                    className="btn btn-light border border-dark mx-3 py-1 px-2"
+                > Add
+                </button>
 
             </td>
 
@@ -141,4 +144,4 @@ function ExerciseView({ex, user,i, setMyExercise, setUser}) {
     );
 }
 
-export default ExerciseView;
+export default ExerciseViewDemo;

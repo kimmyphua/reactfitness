@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.1",
+    "@sendgrid/mail": "^7.4.5",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -18,10 +19,11 @@
     "react-event-calendar": "^0.3.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-scroll": "^1.8.2",
     "recharts": "^2.0.10",
     "web-vitals": "^1.1.2"
   },
-  "proxy": "http://localhost:8000",
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
