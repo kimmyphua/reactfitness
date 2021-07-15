@@ -82,7 +82,6 @@ function ExerciseView({ex, user,i, setMyExercise, setUser}) {
                         <DatePicker
                             selected={startDate}
                             onChange={date => setStartDate(date)}
-                            shouldCloseOnSelect={false}
                         />
 
                             <h6> {ex.activity_hour}</h6>

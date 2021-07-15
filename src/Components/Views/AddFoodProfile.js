@@ -40,7 +40,7 @@ const [startDate, setStartDate] = useState(new Date());
     async function settingFood(){
         console.log(foodLog)
         // setQuantity(e.target.value)
-        setFoodLog(prevState => ({...prevState,
+        await setFoodLog(prevState => ({...prevState,
         creator:user._id,
         name:item.item_name,
         brand: item.brand_name,
@@ -57,7 +57,7 @@ const [startDate, setStartDate] = useState(new Date());
     }
 
 
-    async function settingKind(e) {
+    function settingKind(e) {
         setFoodLog(prevState => ({...prevState,  kind: e.target.value,
         }))
     }
@@ -104,7 +104,7 @@ const [startDate, setStartDate] = useState(new Date());
 
     return (
         <>
-            <button onClick={handleShow} type="submit" className="btn btn-light"> Add </button>
+            <button onClick={handleShow} type="submit" className="btn btn-light border-dark border-1"> Add </button>
             <Modal show={show} onHide={handleClose}>
                 <div className={`border border-dark border-2`} key={i}>
 
@@ -156,12 +156,9 @@ const [startDate, setStartDate] = useState(new Date());
                         <DatePicker
                             selected={startDate}
                             onChange={date => setStartDate(date)}
-                            shouldCloseOnSelect={false}
                         />
                         </Col>
-                        {/*<Form id="form" onSubmit={logFood}>*/}
-                        {/*    <button onClick={handleShow} type="submit" className="btn btn-light"> Add </button>*/}
-                        {/*</Form*/}
+
                         <Form onSubmit={logFood} >
                             <Row className="justify-content-center">
                                 <button
@@ -179,9 +176,6 @@ const [startDate, setStartDate] = useState(new Date());
 
 
             </Modal>
-
-
-
 
         </>
     );

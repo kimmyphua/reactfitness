@@ -3,11 +3,13 @@
 }
 
 .container {
-    height: 100vh;
+    max-height: 80vh;
+    overflow: scroll;
 }
 
 .registrationFormContainer {
-    width: 24rem;
+    width: 54rem;
+    margin-top: 120px;
 }
 
 .registrationFormLegend {

@@ -28,9 +28,6 @@ function Settings({auth, setAuth,user}) {
         setData(prevState => ({...prevState, [e.target.name]: e.target.value}))
     }
 
-    // if (auth) {
-    //     return < Redirect to="/profile"/>
-    // }
 
 
     return (

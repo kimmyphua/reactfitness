@@ -67,14 +67,14 @@ function CalculatorForm(user) {
         try{
             await axios.put(`/api/user/edit/${user.user._id}`, stat)
             await axios.put(`/api/user/weight/${user.user._id}` , weightLog)
-            console.log(stat)
-            console.log(weightLog)
+
+            alert("Successfully Updated Stats!")
         }catch (e) {
             console.log(e.response)
         }
 
-        alert("Successfully Updated Stats!")
         weightInitialize()
+        setShow(false)
     }
 
     async function change(e) {
@@ -230,7 +230,7 @@ function CalculatorForm(user) {
                                 placeholder="enter weight"
                                 required={true}/>
 
-                            <label className="text-muted mx-1 text-start" htmlFor="floatingSelect">Click to Change Weight (kg)</label>
+                            <label className="text-muted mx-1 text-end" htmlFor="floatingSelect">Weight (kg)</label>
 
                         </Row>
                         <Row className="form-floating my-1 py-1 w-75 mx-5 ">
@@ -242,12 +242,12 @@ function CalculatorForm(user) {
                                     onChange={change}
                                     required={true}>
 
-                                <option> Click to change gender </option>
+                                <option> Click to change  </option>
                                 <option value="female">Female</option>
                                 <option value="male">Male</option>
 
                             </select>
-                            <label className="text-dark text-start mx-2" htmlFor="floatingSelect">Current gender: <text className="text-danger fw-bold"> {user.user.gender}</text></label>
+                            <label className="text-dark text-end mx-2" htmlFor="floatingSelect">Gender: <text className="text-danger fw-bold"> {user.user.gender}</text></label>
                         </Row>
 
                         <Row className="form-floating my-1 py-1 w-75 mx-5">
@@ -263,7 +263,7 @@ function CalculatorForm(user) {
                                 required={true}
                             />
 
-                            <label className="text-muted mx-1 text-start" htmlFor="floatingSelect">Click to Change Height (cm)</label>
+                            <label className="text-muted mx-1 text-end" htmlFor="floatingSelect">Height (cm) </label>
                         </Row>
                         <Row className="form-floating my-1 py-1 w-75 mx-5">
 
@@ -278,7 +278,7 @@ function CalculatorForm(user) {
                                 required={true}
                             />
 
-                            <label className="text-muted mx-2 text-start" htmlFor="floatingSelect">Click to Change Age (Years)</label>
+                            <label className="text-muted mx-2 text-end" htmlFor="floatingSelect">Age (Years)</label>
 
                         </Row>
                         <Row className="form-floating my-1 py-1 w-75 mx-5">
@@ -289,13 +289,13 @@ function CalculatorForm(user) {
                                 className="form-select"
                                 onChange={change}
                                 required={true}>
-                                <option value={""}>Click to change Activity Level: </option>
+                                <option value={""}>Click to change </option>
                                 <option value={"sedentary"}>Sedentary</option>
                                 <option value={"lightly-active"}>Lightly Active</option>
                                 <option value={"moderately-active"}>Moderately Active</option>
                                 <option value={"very-active"}>Very Active</option>
                             </select>
-                            <label className="text-dark text-start mx-2" htmlFor="floatingSelect">{user.user.activity}</label>
+                            <label className="text-dark text-end mx-2" htmlFor="floatingSelect">{user.user.activity}</label>
 
                         </Row>
                         <Row className="form-floating my-1 py-1 w-75 mx-5">
@@ -306,12 +306,12 @@ function CalculatorForm(user) {
                                     defaultValue={user.user.goal}
                                     onChange={change}
                                     required={true}>
-                                <option>Click to change goal:</option>
+                                <option>Click to change</option>
                                 <option value="weight-loss">Weight Loss</option>
                                 <option value="maintain">Maintain</option>
                                 <option value="weight-gain">Weight-Gain</option>
                             </select>
-                            <label className="text-dark text-start mx-2" htmlFor="floatingSelect">{user.user.goal}</label>
+                            <label className="text-dark text-end mx-2" htmlFor="floatingSelect">{user.user.goal}</label>
                         </Row>
 
                         <Row className="justify-content-center mt-2">

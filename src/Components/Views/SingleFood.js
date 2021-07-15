@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import {Col, Form, Modal, Row} from "react-bootstrap";
-import DatePicker from "react-datepicker";
+
 
 function SingleFood({food, setUser, setMyFood}) {
     const [show, setShow] = useState(false);
@@ -11,7 +11,7 @@ function SingleFood({food, setUser, setMyFood}) {
     const [quantity, setQuantity] = useState(1)
     const [foodLog, setFoodLog] = useState({})
 
-
+    console.log(quantity)
     function handleShow() {
         setShow(true)
         settingFood()
@@ -45,11 +45,11 @@ function SingleFood({food, setUser, setMyFood}) {
     async function settingFood(e) {
         console.log(foodLog)
         // setQuantity(e.target.value)
-        setFoodLog(prevState => ({
+        await setFoodLog(prevState => ({
             ...prevState,
-            calories: Math.floor(food.calories * quantity),
-            serving_size: Math.floor(food.serving_sizet * quantity),
-            serving_weight: Math.floor(food.serving_weight * quantity),
+            calories: Math.floor(food.calories*quantity),
+            serving_size: Math.floor(food.serving_size*quantity),
+            serving_weight: Math.floor(food.serving_weight*quantity),
             total_fat: Math.floor(food.total_fat * quantity),
             total_carbs: Math.floor(food.total_carbs * quantity),
             protein: Math.floor(food.protein * quantity),
@@ -58,10 +58,17 @@ function SingleFood({food, setUser, setMyFood}) {
             kind: e?.target?.value ? e.target.value : food.kind,
         }))
     }
-    function changeQuantity(e){
-        setQuantity(e.target.value)
+    // async function changeQuantity(e){
+    //     await setQuantity(e.target.value)
+    //     await settingFood()
+    // }
+
+    useEffect(()=> {
         settingFood()
-    }
+    },[quantity])
+
+
+
 
     async function updateFood(e){
         e.preventDefault()
@@ -102,12 +109,13 @@ function SingleFood({food, setUser, setMyFood}) {
                         <span>
 
                             <form className="form-floating my-1">
-                            <input onChange={changeQuantity}
+                            <input onChange={(e)=>setQuantity(e.target.value)}
                                    type="number"
                                    name="quantity"
+                                   step={0.1}
                                    id="label"
                                    className="form-control"
-                                   min={1}/>
+                                   min={0.1}/>
                             <label htmlFor="label" className="text-dark">Quantity</label>
                         </form>
                         </span>
@@ -130,9 +138,7 @@ function SingleFood({food, setUser, setMyFood}) {
 
 
                         </Col>
-                        {/*<Form id="form" onSubmit={logFood}>*/}
-                        {/*    <button onClick={handleShow} type="submit" className="btn btn-light"> Add </button>*/}
-                        {/*</Form*/}
+
                         <Form onSubmit={updateFood} >
                             <Row className="justify-content-center">
                                 <button

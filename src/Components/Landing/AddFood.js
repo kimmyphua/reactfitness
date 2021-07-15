@@ -61,46 +61,16 @@ function AddFood({item,i}) {
 
     async function logFood(e){
         e.preventDefault()
-        alert("please sign in or register to use")
-        // try{
-        //     await axios.post(`/api/food/create`, foodLog);
-        //     setShow(false)
-        //     console.log(foodLog)
-        // }catch (e) {
-        //     console.log(e.response)
-        // }
-        // setUserStats()
+        alert("Thanks for trying the demo! Please sign in or register to use :)")
+
     }
-
-    // async function setUserStats() {
-    //     try {
-    //         let {data} = await axios.get("/api/auth/user", {
-    //             headers: {
-    //                 authorization: `Bearer ${localStorage.token}`
-    //             }
-    //         })
-    //
-    //         setMyFood(data.user.food_log)
-    //         setShow(false)
-    //
-    //     } catch (e) {
-    //         setUser({})
-    //         localStorage.removeItem("token")
-    //     }
-    // }
-
-
-
-
-
-
 
 
 
 
     return (
         <>
-            <button onClick={handleShow} type="submit" className="btn btn-light"> Add </button>
+            <button onClick={handleShow} type="submit" className="btn btn-light border-dark border-1"> Add </button>
             <Modal show={show} onHide={handleClose}>
                 <div className={`border border-dark border-2`} key={i}>
 
@@ -152,12 +122,9 @@ function AddFood({item,i}) {
                             <DatePicker
                                 selected={startDate}
                                 onChange={date => setStartDate(date)}
-                                shouldCloseOnSelect={false}
                             />
                         </Col>
-                        {/*<Form id="form" onSubmit={logFood}>*/}
-                        {/*    <button onClick={handleShow} type="submit" className="btn btn-light"> Add </button>*/}
-                        {/*</Form*/}
+
                         <Form onSubmit={logFood} >
                             <Row className="justify-content-center">
                                 <button

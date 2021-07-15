@@ -1,13 +1,9 @@
 import React, {useState, useRef} from "react";
-import {Container, Row, Form, Modal} from "react-bootstrap";
+import {Container, Row, Form, Modal, Col} from "react-bootstrap";
 import styles from "./Register.module.css";
 import axios from 'axios'
 import {Link, Redirect} from "react-router-dom";
-import SetUp from "./SetUp";
-// import {Tab,Tabs, Modal, Container,Form,Col,Row,} from 'react-bootstrap'
-// import axios from "axios";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+
 
 function Register({auth, setAuth}) {
     const [data, setData] = useState({})
@@ -46,10 +42,6 @@ function Register({auth, setAuth}) {
     }
 
 
-    // async function change(e) {
-    //     await setStat(prevState => ({...prevState, [e.target.name]: e.target.value }))
-    //
-    // }
 
     function setWeight(){
         setStat(prevState => ({...prevState, weight_log: { weight_kg: stat.weight, date: new Date().toDateString()}}))
@@ -118,23 +110,6 @@ function Register({auth, setAuth}) {
     console.log(stat)
 
 
-    // async function submitData(e) {
-    //     e.preventDefault()
-    //     try {
-    //         let {data: {token}} = await axios.post("/api/auth/register", data)
-    //         console.log(token)
-    //         localStorage.setItem("token", token)
-    //         setAuth(true)
-    //
-    //     } catch (e) {
-    //         console.log(e)
-    //         alert(e)
-    //     }
-    // }
-    //
-    // function changeData(e) {
-    //     setData(prevState => ({...prevState, [e.target.name]: e.target.value}))
-    // }
 
 
 
@@ -156,7 +131,8 @@ function Register({auth, setAuth}) {
                             >
                                 Registration Form
                             </legend>
-                            {/*<Form ref={form} onSubmit={bmr} method="post">*/}
+                            <Row>
+                                <Col md={6}>
                                 <div className="form-group">
                                     <label htmlFor="inputForEmail">Email address *</label>
                                     <input onChange={change}
@@ -224,7 +200,8 @@ function Register({auth, setAuth}) {
                                     />
                                 </div>
 
-
+                                </Col>
+                                <Col md={6}>
                                 <div className="form-group">
                                     <label htmlFor="inputForWeight">Age *</label>
                                     <input onChange={change}
@@ -248,7 +225,7 @@ function Register({auth, setAuth}) {
                                            required={true}
 
                                     >
-                                        <option> Click to change gender </option>
+                                        <option> Click to choose gender </option>
                                         <option value="female">Female</option>
                                         <option value="male">Male</option>
                                     </select>
@@ -295,9 +272,10 @@ function Register({auth, setAuth}) {
                                         <Link to="/login">Cancel</Link>
                                     </button>
                                 </div>
-                            {/*</Form>*/}
-
+                            </Col>
+                            </Row>
                         </fieldset>
+
                     </div>
                 </div>
 

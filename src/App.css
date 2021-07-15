@@ -38,11 +38,11 @@
   }
 }
 .info{
-  background: url("https://img.freepik.com/free-photo/healthy-food-background-autumn-fresh-vegetables-dark-stone-table-with-copy-space-top-view_127032-1953.jpg?size=626&ext=jpg");
-  background-repeat: repeat-y;
+  background: url("https://img.freepik.com/free-photo/healthy-food-background-autumn-fresh-vegetables-dark-stone-table-with-copy-space-top-view_127032-1953.jpg?size=626&ext=jpg") repeat-y;
   /*background: url("https://www.tofinoschooloffitness.com/wp-content/uploads/tofino-school-of-fitness-background1.jpg");*/
   width: 100%;
   height: 90vh;
+  overflow: scroll;
   background-size: cover;
   font-family: Arial;
   color: white;

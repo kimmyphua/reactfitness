@@ -38,18 +38,18 @@ export default function NutritionPieChart({cpf}) {
 //     console.log(entry)
 // }
     return (
-        <Container>
+        <div>
         <Row className="justify-content-center">
             <Col md={8}>
-                <ResponsiveContainer width={'99%'} height={400}>
-        <PieChart width={500} height={400}>
+                <ResponsiveContainer width={'100%'} height={400}>
+        <PieChart width={600} height={400}>
             <Pie
                 data={cpf}
-                cx={200}
+                cx={150}
                 cy={200}
                 labelLine={false}
                 label={renderCustomizedLabel}
-                outerRadius={160}
+                outerRadius={130}
                 fill="#8884d8"
                 dataKey="value"
             >
@@ -96,6 +96,6 @@ export default function NutritionPieChart({cpf}) {
                 </Table>
             </Col>
             </Row>
-        </Container>
+        </div>
     );
 }

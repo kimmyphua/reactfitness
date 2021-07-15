@@ -23,17 +23,8 @@ function ExerciseViewDemo({ex, i}) {
 
     async function postExercise(e) {
         e.preventDefault()
-        alert("please log in or register to continue")
-        // console.log(myExercise)
-        // try {
-        //     await axios.put(`/api/user/exercise/${user._id}`, myEx )
-        //     console.log(myEx)
-        //     alert("Success")
-        // } catch (e) {
-        //     console.log(e.response)
-        //     alert("please log in to continue")
-        // }
-        // setUserStats()
+        alert("Thanks for trying the demo :) Please log in or register to continue!")
+
     }
 
 
@@ -85,7 +76,6 @@ function ExerciseViewDemo({ex, i}) {
                         <DatePicker
                             selected={startDate}
                             onChange={date => setStartDate(date)}
-                            shouldCloseOnSelect={false}
                         />
 
                         <h6> {ex.activity_hour}</h6>

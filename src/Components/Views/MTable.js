@@ -15,8 +15,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import TableHead from '@material-ui/core/TableHead';
-import {Button} from "@material-ui/core";
-import axios from "axios";
+
 import DeleteWeight from "./DeleteWeight";
 
 const useStyles1 = makeStyles((theme) => ({
@@ -130,7 +129,7 @@ console.log(newGraphData)
                     {newGraphData.length > 0 ?
 
                         (rowsPerPage > 1
-                                ? newGraphData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).sort((a,b) =>(new Date(a.date) - new Date(b.date)))
+                                ? newGraphData.sort((a,b) =>(new Date(b.date) - new Date(a.date))).slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 : newGraphData
                         ).map((data,i) => (
                             <TableRow key={i}>
@@ -142,7 +141,6 @@ console.log(newGraphData)
                                 </TableCell>
                                 <TableCell align="center">
                                     <DeleteWeight data={data}
-                                        // weightInitialize={weightInitialize}
                                                   setGraphData={setGraphData}/>
 
                                 </TableCell>
@@ -160,7 +158,6 @@ console.log(newGraphData)
                             </TableCell>
                             <TableCell align="center">
                                 <DeleteWeight data={newGraphData}
-                                    // weightInitialize={weightInitialize}
                                               setGraphData={setGraphData}/>
 
                             </TableCell>

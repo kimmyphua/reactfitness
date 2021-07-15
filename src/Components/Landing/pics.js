@@ -8,20 +8,20 @@ const places = [
         title: 'Get Nutrition Data',
         description:
             <Home />,
-        imageUrl: 'https://i.imgur.com/nKnCdWe.png',
+        imageUrl: 'https://i.imgur.com/6LzwLbG.png',
         time: 1500,
     },
     {
         title: 'Track Workouts',
         description: <ExerciseDemo/>,
-        imageUrl: 'https://i.imgur.com/humePXC.png',
+        imageUrl: 'https://i.imgur.com/qeXoiJv.png',
         time: 1500,
     },
     {
         title: 'Track Weight',
         description:
         'Weighing yourself regularly can help increase your awareness of your weight and weight-related behaviors. It may help you lose more weight and prevent you from gaining that weight back in the long-term. Regular self-weighing may just be that extra motivation you need to achieve your weight goals.',
-        imageUrl: 'https://i.imgur.com/6NLpv9V.png',
+        imageUrl: 'https://i.imgur.com/qeXoiJv.png',
         time: 1500,
     },
     {
