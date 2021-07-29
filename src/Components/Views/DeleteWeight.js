@@ -18,9 +18,7 @@ const [user, setUser] =useState({})
                 }
             })
             setUser(data.user)
-            // setMyFood(data.user.food_log)
-            // setMyExercise(data.user.exercise_log)
-            // console.log(data.user.exercise_log)
+            setGraphData(data.user.weight_log)
         } catch (e) {
             setUser({})
             localStorage.removeItem("token")
@@ -48,11 +46,11 @@ const [user, setUser] =useState({})
         try {
             await axios.put(`/api/user/delete-weight/${user._id}`, weightToDelete);
             console.log('Delete successful');
-
+            weightInitialize()
         } catch (e) {
             console.log(e)
         }
-        weightInitialize()
+        // weightInitialize()
     }
 
 

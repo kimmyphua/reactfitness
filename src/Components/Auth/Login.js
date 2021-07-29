@@ -51,6 +51,9 @@ function Login({auth, setAuth}) {
 
     return (
         <Container>
+
+
+
             <Row>
             <div className={`${styles.container} text-center container-fluid d-flex align-items-center justify-content-center`}>
 
@@ -64,7 +67,7 @@ function Login({auth, setAuth}) {
                         </legend>
                         <Form ref={form} onSubmit={submitForm} method="post">
                             <div className="form-group">
-                                <label htmlFor="inputForEmail">Email address *</label>
+                                <label htmlFor="inputForEmail">Email Address:</label>
 
                                 <input onChange={change}
                                        type="email"
@@ -78,7 +81,7 @@ function Login({auth, setAuth}) {
 
                             </div>
                             <div className="form-group">
-                                <label htmlFor="inputForPassword">Password *</label>
+                                <label htmlFor="inputForPassword">Password:</label>
                                 <input onChange={change}
                                        type="password"
                                        name="password"

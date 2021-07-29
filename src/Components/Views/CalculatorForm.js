@@ -216,7 +216,7 @@ function CalculatorForm(user) {
 
                     <Tab eventKey="Calculator" title="Calculator " tabClassName="text-dark">
                         <Row>
-                        <Col md={5}>
+                        <Col md={8}>
                         <Row className="form-floating my-1 py-1 w-75 mx-5 ">
 
 
@@ -325,9 +325,9 @@ function CalculatorForm(user) {
                         </Row>
 
                         </Col>
-                            <Col md={7}>
-                                <MTable user={user} newGraphData={graphData} setGraphData={setGraphData} />
-                            </Col>
+                            {/*<Col md={7}>*/}
+                            {/*    <MTable user={user} newGraphData={graphData} setGraphData={setGraphData} />*/}
+                            {/*</Col>*/}
                     </Row>
                     </Tab>
 

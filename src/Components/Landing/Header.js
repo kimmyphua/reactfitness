@@ -5,6 +5,7 @@ import SortIcon from '@material-ui/icons/Sort';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Link as Scroll } from 'react-scroll';
 import {Col, Row} from "react-bootstrap";
+import {NavLink} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -68,8 +69,10 @@ export default function Header() {
                     </h3>
                     <h3 className={classes.appbarTitle}>
                         The only <span className={classes.colorText}>Fitness <br />
-                        APP</span> you need.
+                        APP</span> you need. <span>
+                        <NavLink className="fw-light text-light" to='/login'>Sign In.</NavLink></span>
                     </h3>
+
                     <Scroll to="body" smooth={true}>
                         <IconButton>
 

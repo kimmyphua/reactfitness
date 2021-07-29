@@ -109,7 +109,7 @@ export default function MTable({newGraphData ,setGraphData}) {
         setPage(0);
     };
 
-
+    const [key, setKey] = useState("")
 
 
 console.log(newGraphData)
@@ -129,12 +129,13 @@ console.log(newGraphData)
                     {newGraphData.length > 0 ?
 
                         (rowsPerPage > 1
-                                ? newGraphData.sort((a,b) =>(new Date(b.date) - new Date(a.date))).slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                                ? newGraphData.sort((a,b) =>(new Date(b.date) - new Date(a.date)))
+                                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 : newGraphData
                         ).map((data,i) => (
                             <TableRow key={i}>
                                 <TableCell align="center">
-                                    {data?.date}
+                                    {data?.date?.split("T")[0] }
                                 </TableCell>
                                 <TableCell align="center">
                                     {data?.weight_kg}
@@ -151,7 +152,7 @@ console.log(newGraphData)
 
                         <TableRow>
                             <TableCell align="center">
-                                {newGraphData.date}
+                                {newGraphData?.date?.split("T")[0] }
                             </TableCell>
                             <TableCell align="center">
                                 {newGraphData.weight_kg}

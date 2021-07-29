@@ -40,7 +40,7 @@ export default function NutritionTable({user, setMyFood, setUser}) {
 
     async function getFood() {
         setFood([])
-        let {data} = await axios.get(`https://api.nutritionix.com/v1_1/search/${key}?results=${page}&fields=item_name,brand_name,item_id,nf_calories,nf_total_fat,nf_total_carbohydrate,nf_protein,nf_sugars,nf_dietary_fiber,nf_serving_size_unit,nf_serving_weight_grams&appId=e9bdcdb2&appKey=2cab49db86772f05225147a46fc2cba2`)
+        let {data} = await axios.get(`https://api.nutritionix.com/v1_1/search/${key}?results=${page}&fields=item_name,brand_name,item_id,nf_calories,nf_total_fat,nf_total_carbohydrate,nf_protein,nf_sugars,nf_dietary_fiber,nf_serving_size_unit,nf_serving_weight_grams&appId=${process.env.REACT_APP_APPID}&appKey=${process.env.REACT_APP_NUTRIX_KEY}`)
         console.log(data)
         data.hits.forEach(item => {
             setFood(prevState => [...prevState, item.fields]) })

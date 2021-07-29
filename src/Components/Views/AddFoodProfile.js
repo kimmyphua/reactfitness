@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Col, Form, Row, Modal} from "react-bootstrap";
-import Calendar from 'react-calendar'
-// import 'react-calendar/dist/Calendar.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import FitnessCenterIcon from 'react-materialize';
+
 
 
 

@@ -134,7 +134,7 @@ function Register({auth, setAuth}) {
                             <Row>
                                 <Col md={6}>
                                 <div className="form-group">
-                                    <label htmlFor="inputForEmail">Email address *</label>
+                                    <label htmlFor="inputForEmail">Email address:</label>
                                     <input onChange={change}
                                            id="inputForEmail"
                                            type="email"
@@ -147,7 +147,7 @@ function Register({auth, setAuth}) {
 
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="inputForName">Your Name</label>
+                                    <label htmlFor="inputForName">Your Name:</label>
                                     <input onChange={change}
                                            id="inputForName"
                                            type="text"
@@ -161,7 +161,7 @@ function Register({auth, setAuth}) {
 
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="inputForPassword">Password *</label>
+                                    <label htmlFor="inputForPassword">Password (min 6 characters):</label>
                                     <input onChange={change}
                                            type="password"
                                            name="password"
@@ -175,7 +175,7 @@ function Register({auth, setAuth}) {
 
 
                                 <div className="form-group">
-                                    <label htmlFor="inputForWeight">Weight *</label>
+                                    <label htmlFor="inputForWeight">Weight (kg):</label>
                                     <input onChange={change}
                                            type="number"
                                            name="weight"
@@ -188,7 +188,7 @@ function Register({auth, setAuth}) {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="inputForWeight">Height *</label>
+                                    <label htmlFor="inputForWeight">Height (cm):</label>
                                     <input onChange={change}
                                            type="number"
                                            name="height"
@@ -203,13 +203,13 @@ function Register({auth, setAuth}) {
                                 </Col>
                                 <Col md={6}>
                                 <div className="form-group">
-                                    <label htmlFor="inputForWeight">Age *</label>
+                                    <label htmlFor="inputForWeight">Age (years):</label>
                                     <input onChange={change}
                                            type="number"
                                            name="age"
                                            className={`${styles.inputStyle} form-control`}
                                            id="inputForWeight"
-                                           placeholder="Enter Weight"
+                                           placeholder="Enter Age"
                                            required={true}
                                            minLength={1}
                                     />
@@ -217,7 +217,7 @@ function Register({auth, setAuth}) {
 
 
                                 <div className="form-group">
-                                    <label htmlFor="inputForGender">Gender *</label>
+                                    <label htmlFor="inputForGender">Gender:</label>
                                     <select onChange={change}
                                            name="gender"
                                            className={`${styles.inputStyle} form-control`}
@@ -232,7 +232,7 @@ function Register({auth, setAuth}) {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="inputForGender">Activity *</label>
+                                    <label htmlFor="inputForGender">Activity:</label>
                                     <select onChange={change}
                                             name="activity"
                                             className={`${styles.inputStyle} form-control`}
@@ -240,7 +240,7 @@ function Register({auth, setAuth}) {
                                             required={true}
 
                                     >
-                                        <option value={""}>Click to Choose Activity Level: </option>
+                                        <option value={""}>Click to Choose Activity Level </option>
                                         <option value={"sedentary"}>Sedentary</option>
                                         <option value={"lightly-active"}>Lightly Active</option>
                                         <option value={"moderately-active"}>Moderately Active</option>
@@ -249,7 +249,7 @@ function Register({auth, setAuth}) {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="inputForGender">Goal *</label>
+                                    <label htmlFor="inputForGender">Weight Goal:</label>
                                     <select onChange={change}
                                             name="goal"
                                             className={`${styles.inputStyle} form-control`}
